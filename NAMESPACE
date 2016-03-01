@@ -1,0 +1,5 @@
+S3method(plot, metaoutliers)
+export(metahet, metaoutliers)
+
+importFrom("graphics", "abline", "axis", "plot.default")
+importFrom("stats", "pchisq", "quantile", "rnorm", "uniroot")

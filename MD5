@@ -1,0 +1,15 @@
+3134e3e4dc780406adcf210a3cf8c26b *DESCRIPTION
+a8d9a15b5e27773628ba7a5740994a75 *NAMESPACE
+433d298cbf4670fa17562996888694a1 *R/metahet.R
+55e73fc6fb0f4c4811a9760fdf522cc0 *R/metahet.base.R
+854a4f6b43aa58fbda2cb21330ec8bba *R/metaoutliers.R
+7be3567e6737946beb885afb814c4bb7 *R/plot.metaoutliers.R
+6a6519577e2dedbff3b1e13a7d60c31c *R/tau2.m.solver.R
+0fb792323e760ce800b754f82baad0db *R/tau2.r.solver.R
+e69a299b93c13c1c6a419b033618cce5 *data/aex.rda
+ec623caffab31f46e26c5b1ada883a3a *data/hipfrac.rda
+22d370cd47cb59535ee74a718fe39c3a *man/aex.Rd
+5a1b61127c48a6438d61d53e715796dd *man/hipfrac.Rd
+39385a3ed457cb057cd9c40fa6397def *man/metahet.Rd
+c9ab4cfb6f5bf078e87afcea1455363f *man/metaoutliers.Rd
+7c474c30dd2e0c0f355fde4f15727fc5 *man/plot.metaoutliers.Rd
