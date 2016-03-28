@@ -1,0 +1,21 @@
+\name{ha}
+\alias{ha}
+\docType{data}
+\title{
+A Meta-Analysis for Investigating the Effect of Placebo Interventions for All Clinical Conditions Regarding Patient-Reported Outcomes
+}
+\description{
+This meta-analysis serves as an example to illustrate the function usage in the package \pkg{altmeta}.
+}
+\usage{data("ha")}
+\format{
+  A data frame containing 109 studies with the observed effect sizes and their within-study variances.
+  \describe{
+    \item{\code{y}}{The observed effect size for each collected study in the meta-analysis.}
+    \item{\code{s2}}{The within-study variance for each study.}
+  }
+}
+\source{
+Hrobjartsson A and Gotzsche PC (2010). "Placebo interventions for all clinical conditions." \emph{Cochrane Database of Systematic Reviews}, \bold{1}. Art No.: CD003974. DOI: 10.1002/14651858.CD003974.pub3.
+}
+\keyword{datasets}
