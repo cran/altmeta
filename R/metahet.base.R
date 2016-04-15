@@ -34,7 +34,7 @@ metahet.base <- function(y, s2){
 
 	expit <- function(x) {ifelse(x >= 0, 1/(1 + exp(-x/0.0001)), exp(x/0.0001)/(1 + exp(x/0.0001)))}
 	psi <- function(x) {sum(w*(expit(x - y) - 0.5))}
-	mu.med <- uniroot(psi, c(min(y), max(y)))$root
+	mu.med <- uniroot(psi, c(min(y) - 0.001, max(y) + 0.001))$root
 	out$weighted.median <- mu.med
 	Qm <- sum(sqrt(w)*abs(y - mu.med))
 	Hm <- sqrt(3.14159/2)*Qm/n

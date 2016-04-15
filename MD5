@@ -1,7 +1,7 @@
-4f18ddc899ac821a65affe41ab958281 *DESCRIPTION
+38efe5bf0f826a00fe134f6a2436eb2a *DESCRIPTION
 b9a56b45ca12af18c7ab6453b3200f34 *NAMESPACE
 433d298cbf4670fa17562996888694a1 *R/metahet.R
-55e73fc6fb0f4c4811a9760fdf522cc0 *R/metahet.base.R
+3cda4438de737f4a9db0599c2088e435 *R/metahet.base.R
 854a4f6b43aa58fbda2cb21330ec8bba *R/metaoutliers.R
 bb645c0b2baa6b6fb827dfd1ce020b09 *R/metapb.R
 7be3567e6737946beb885afb814c4bb7 *R/plot.metaoutliers.R
@@ -16,7 +16,7 @@ b44a9e91e473e4939d7087a8d10a2ad1 *data/slf.rda
 bd41ca143fb48af1d35fd319328ef4f4 *man/ha.Rd
 5a1b61127c48a6438d61d53e715796dd *man/hipfrac.Rd
 fc2d34d750e9c025dea179d3077acd54 *man/lcj.Rd
-39385a3ed457cb057cd9c40fa6397def *man/metahet.Rd
+6910cd7bc3e66eaf2b48be360cd3b1dc *man/metahet.Rd
 c9ab4cfb6f5bf078e87afcea1455363f *man/metaoutliers.Rd
 4f4e0c3c6ecc15758ab409930e77a932 *man/metapb.Rd
 7c474c30dd2e0c0f355fde4f15727fc5 *man/plot.metaoutliers.Rd

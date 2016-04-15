@@ -58,7 +58,7 @@ Higgins JPT and Thompson SG (2002). "Quantifying heterogeneity in a meta-analysi
 
 Higgins JPT, Thompson SG, Deeks JJ, and Altman DG (2003). "Measuring inconsistency in meta-analyses." \emph{BMJ}, \bold{327}(7414), 557--560.
 
-Lin L, Chu H, and Hodges JS (2016+). "Alternative measures of between-study heterogeneity in meta-analysis: reducing the impact of outlying studies".
+Lin L, Chu H, and Hodges JS (2016+). "Alternative measures of between-study heterogeneity in meta-analysis: reducing the impact of outlying studies." \emph{Biometrics}.
 }
 
 
