@@ -30,15 +30,15 @@ Draws a plot showing study-specific standardized residuals.
 \code{\link{metaoutliers}}
 }
 \examples{
-data("aex")
-attach(aex)
+data("dat.aex")
+attach(dat.aex)
 out.aex <- metaoutliers(y, s2, model = "FE")
-detach(aex)
+detach(dat.aex)
 plot(out.aex)
 
-data("hipfrac")
-attach(hipfrac)
+data("dat.hipfrac")
+attach(dat.hipfrac)
 out.hipfrac <- metaoutliers(y, s2, model = "RE")
-detach(hipfrac)
+detach(dat.hipfrac)
 plot(out.hipfrac)
 }

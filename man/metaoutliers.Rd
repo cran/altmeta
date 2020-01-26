@@ -35,18 +35,18 @@ This functions returns a list which contains standardized residuals and identifi
 \references{
 Hedges LV and Olkin I (1985). \emph{Statistical Method for Meta-Analysis}. Academic Press, Orlando, FL.
 
-Viechtbauer W and Cheung MWL (2010). "Outlier and influence diagnostics for meta-analaysis." \emph{Research Synthesis Methods}, \bold{1}(2), 112--125.
+Viechtbauer W and Cheung MWL (2010). "Outlier and influence diagnostics for meta-analysis." \emph{Research Synthesis Methods}, \bold{1}(2), 112--25. <doi:10.1002/jrsm.11>
 }
 
 \examples{
-data("aex")
-attach(aex)
+data("dat.aex")
+attach(dat.aex)
 metaoutliers(y, s2, model = "FE")
 metaoutliers(y, s2, model = "RE")
-detach(aex)
+detach(dat.aex)
 
-data("hipfrac")
-attach(hipfrac)
+data("dat.hipfrac")
+attach(dat.hipfrac)
 metaoutliers(y, s2)
-detach(hipfrac)
+detach(dat.hipfrac)
 }

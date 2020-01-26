@@ -1,13 +1,13 @@
-\name{slf}
-\alias{slf}
+\name{dat.slf}
+\alias{dat.slf}
 \docType{data}
 \title{
 A Meta-Analysis for Investigating the Effect of Nicotine Gum for Smoking Cessation
 }
 \description{
-This meta-analysis serves as an example to illustrate the function usage in the package \pkg{altmeta}.
+This meta-analysis serves as an example to illustrate function usage in the package \pkg{altmeta}.
 }
-\usage{data("slf")}
+\usage{data("dat.slf")}
 \format{
   A data frame containing 56 studies with the observed effect sizes and their within-study variances.
   \describe{
@@ -16,6 +16,6 @@ This meta-analysis serves as an example to illustrate the function usage in the 
   }
 }
 \source{
-Stead LF, Perera R, Bullen C, Mant D, Hartmann-Boyce J, Cahill K, and Lancaster T (2012). "Nicotine replacement therapy for smoking cessation." \emph{Cochrane Database of Systematic Reviews}, \bold{11}. Art No.: CD000146. DOI: 10.1002/14651858.CD000146.pub4.
+Stead LF, Perera R, Bullen C, Mant D, Hartmann-Boyce J, Cahill K, and Lancaster T (2012). "Nicotine replacement therapy for smoking cessation." \emph{Cochrane Database of Systematic Reviews}, \bold{11}. Art No.: CD000146. <doi:10.1002/14651858.CD000146.pub4>
 }
 \keyword{datasets}

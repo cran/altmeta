@@ -1,13 +1,13 @@
-\name{aex}
-\alias{aex}
+\name{dat.aex}
+\alias{dat.aex}
 \docType{data}
 \title{
 A Meta-Analysis for Evaluating the Effect of Aerobic Exercise on Visceral Adipose Tissue Content/Volume
 }
 \description{
-This meta-analysis serves as an example to illustrate the function usage in the package \pkg{altmeta}.
+This meta-analysis serves as an example to illustrate function usage in the package \pkg{altmeta}.
 }
-\usage{data("aex")}
+\usage{data("dat.aex")}
 \format{
   A data frame containing 29 studies with the observed effect sizes and their within-study variances.
   \describe{
@@ -16,6 +16,6 @@ This meta-analysis serves as an example to illustrate the function usage in the 
   }
 }
 \source{
-Ismail I, Keating SE, Baker MK, and Johnson NA (2012). "A systematic review and meta-analysis of the effect of aerobic vs resistance exercise training on visceral fat." \emph{Obesity Reviews}, \bold{13}(1), 68--91.
+Ismail I, Keating SE, Baker MK, and Johnson NA (2012). "A systematic review and meta-analysis of the effect of aerobic vs resistance exercise training on visceral fat." \emph{Obesity Reviews}, \bold{13}(1), 68--91. <doi:10.1111/j.1467-789X.2011.00931.x>
 }
 \keyword{datasets}

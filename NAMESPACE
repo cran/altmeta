@@ -1,5 +1,10 @@
 S3method(plot, metaoutliers)
-export(metahet, metaoutliers)
+export(metahet, metaoutliers, metapb, mvma, mvma.bayesian, mvma.hybrid, mvma.hybrid.bayesian)
 
-importFrom("graphics", "abline", "axis", "plot.default")
-importFrom("stats", "pchisq", "pnorm", "quantile", "rnorm", "uniroot", "lm", "summary.lm", "qt", "var")
+import("rjags")
+importFrom("coda", "gelman.diag")
+importFrom("graphics", "abline", "axis", "par", "plot", "plot.default")
+importFrom("grDevices", "png", "dev.off")
+importFrom("methods", "is")
+importFrom("stats", "optim", "pchisq", "pnorm", "quantile", "rnorm", "uniroot", "update", "lm", "summary.lm", "qt", "var")
+importFrom("utils", "write.table")

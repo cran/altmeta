@@ -49,31 +49,59 @@ The counterparts of the \eqn{H} and \eqn{I^2} statistics are
 \deqn{I_m^2 = \frac{Q_m^2 - 2 n^2/\pi}{Q_m^2}.}
 }
 \value{
-This function returns a list containing p-values of various heterogeneity tests and various heterogeneity measures with 95\% confidence intervals.
+This function returns a list containing p-values of various heterogeneity tests and various heterogeneity measures with 95\% confidence intervals. Specifically, the components include:
+  \item{p.Q}{p-value of the \eqn{Q} statistic (using the resampling method).}
+  \item{p.Q.theo}{p-value of the \eqn{Q} statistic using the \eqn{Q}'s theoretical chi-squared distribution.}
+  \item{p.Qr}{p-value of the \eqn{Q_r} statistic (using the resampling method).}
+  \item{p.Qm}{p-value of the \eqn{Q_m} statistic (using the resampling method).}
+  \item{Q}{the \eqn{Q} statistic.}
+  \item{ci.Q}{95\% CI of the \eqn{Q} statistic.}
+  \item{tau2.DL}{DerSimonian--Laird estimate of the between-study variance.}
+  \item{ci.tau2.DL}{95\% CI of the between-study variance based on the DerSimonian--Laird method.}
+  \item{H}{the \eqn{H} statistic.}
+  \item{ci.H}{95\% CI of the \eqn{H} statistic.}
+  \item{I2}{the \eqn{I^2} statistic.}
+  \item{ci.I2}{95\% CI of the \eqn{I^2} statistic.}
+  \item{Qr}{the \eqn{Q_r} statistic.}
+  \item{ci.Qr}{95\% CI of the \eqn{Q_r} statistic.}
+  \item{tau2.r}{the between-study variance estimate based on the \eqn{Q_r} statistic.}
+  \item{ci.tau2.r}{95\% CI of the between-study variance based on the \eqn{Q_r} statistic.}
+  \item{Hr}{the \eqn{H_r} statistic.}
+  \item{ci.Hr}{95\% CI of the \eqn{H_r} statistic.}
+  \item{Ir2}{the \eqn{I_r^2} statistic.}
+  \item{ci.Ir2}{95\% CI of the \eqn{I_r^2} statistic.}
+  \item{Qm}{the \eqn{Q_m} statistic.}
+  \item{ci.Qm}{95\% CI of the \eqn{Q_m} statistic.}
+  \item{tau2.m}{the between-study variance estimate based on the \eqn{Q_m} statistic.}
+  \item{ci.tau2.m}{95\% CI of the between-study variance based on the \eqn{Q_m} statistic}
+  \item{Hm}{the \eqn{H_m} statistic.}
+  \item{ci.Hm}{95\% CI of the \eqn{H_m} statistic.}
+  \item{Im2}{the \eqn{I_m^2} statistic.}
+  \item{ci.Im2}{95\% CI of the \eqn{I_m^2} statistic.}
 }
 \references{
-DerSimonian R and Laird N (1986). "Meta-analysis in clinical trials." \emph{Controlled Clinical Trials}, \bold{7}(3), 177--188.
+DerSimonian R and Laird N (1986). "Meta-analysis in clinical trials." \emph{Controlled Clinical Trials}, \bold{7}(3), 177--88. <doi:10.1016/0197-2456(86)90046-2>
 
-Higgins JPT and Thompson SG (2002). "Quantifying heterogeneity in a meta-analysis." \emph{Statistics in Medicine}, \bold{21}(11), 1539--1558.
+Higgins JPT and Thompson SG (2002). "Quantifying heterogeneity in a meta-analysis." \emph{Statistics in Medicine}, \bold{21}(11), 1539--58. <doi:10.1002/sim.1186>
 
-Higgins JPT, Thompson SG, Deeks JJ, and Altman DG (2003). "Measuring inconsistency in meta-analyses." \emph{BMJ}, \bold{327}(7414), 557--560.
+Higgins JPT, Thompson SG, Deeks JJ, and Altman DG (2003). "Measuring inconsistency in meta-analyses." \emph{BMJ}, \bold{327}(7414), 557--60. <doi:10.1136/bmj.327.7414.557>
 
-Lin L, Chu H, and Hodges JS (2016+). "Alternative measures of between-study heterogeneity in meta-analysis: reducing the impact of outlying studies." \emph{Biometrics}.
+Lin L, Chu H, and Hodges JS (2017). "Alternative measures of between-study heterogeneity in meta-analysis: reducing the impact of outlying studies." \emph{Biometrics}, \bold{73}(1), 156--166. <doi:10.1111/biom.12543>
 }
 
 
 \examples{
-data("aex")
+data("dat.aex")
 set.seed(1234)
-attach(aex)
+attach(dat.aex)
 metahet(y, s2, 100)
 #metahet(y, s2, 1000)
-detach(aex)
+detach(dat.aex)
 
-data("hipfrac")
+data("dat.hipfrac")
 set.seed(1234)
-attach(hipfrac)
+attach(dat.hipfrac)
 metahet(y, s2, 100)
 #metahet(y, s2, 1000)
-detach(hipfrac)
+detach(dat.hipfrac)
 }
