@@ -32,9 +32,9 @@ Also, the \eqn{H} and \eqn{I^2} statistics (Higgins and Thompson, 2002; Higgins 
 \deqn{I^{2} = \frac{Q - (n - 1)}{Q}.}
 Specifically, the \eqn{H} statistic reflects the ratio of the standard deviation of the underlying mean from a random-effects meta-analysis compared to the standard deviation from a fixed-effect meta-analysis; the \eqn{I^2} statistic describes the proportion of total variance across studies that is due to heterogeneity rather than sampling error.
 
-Outliers are frequently present in meta-analysis, and they may have great impact on the above heterogeneity measures. Alternatively, to be more robust to outliers, the test statistic may be modified as (Lin et al., 2016+):
+Outliers are frequently present in meta-analyses, and they may have great impact on the above heterogeneity measures. Alternatively, to be more robust to outliers, the test statistic may be modified as (Lin et al., 2017):
 \deqn{Q_{r} = \sum_{i = 1}^{n} \sqrt{w_i} |y_{i} - \bar{\mu}|.}
-Based on the \eqn{Q_r} statistic, the method-of-moments estimate of between-study variance \eqn{\hat{\tau}_r^2} is defined as the solution to
+Based on the \eqn{Q_r} statistic, the method-of-moments estimate of the between-study variance \eqn{\hat{\tau}_r^2} is defined as the solution to
 \deqn{Q_r \sqrt{\frac{\pi}{2}} = \sum_{i = 1}^{n} \left\{1 - \frac{w_{i}}{\sum_{j = 1}^{n} w_{j}} + \tau^{2} \left[ w_{i} - \frac{2 w_{i}^{2}}{\sum_{j = 1}^{n} w_{j}} + \frac{w_{i} \sum_{j = 1}^{n} w_{j}^{2}}{(\sum_{j = 1}^{n} w_{j})^2} \right]\right\}.}
 If no positive solution exists to the equation above, set \eqn{\hat{\tau}_{r}^{2} = 0}. The counterparts of the \eqn{H} and \eqn{I^2} statistics are defined as
 \deqn{H_{r} = Q_r \sqrt{\pi/[2 n (n - 1)]};}
@@ -42,7 +42,7 @@ If no positive solution exists to the equation above, set \eqn{\hat{\tau}_{r}^{2
 
 To further improve the robustness of heterogeneity assessment, the weighted \emph{mean} in the \eqn{Q_r} statistic may be replaced by the weighted \emph{median} \eqn{\hat{\mu}_m}, which is the solution to \eqn{\sum_{i = 1}^{n} w_i [I (\theta \geq y_i) - 0.5] = 0} with respect to \eqn{\theta}. The new test statistic is
 \deqn{Q_m = \sum_{i = 1}^{n} \sqrt{w_i} |y_{i} - \hat{\mu}_m|.}
-Based on \eqn{Q_m}, the new estimator of between-study variance \eqn{\hat{\tau}_m^2} is the solution to
+Based on \eqn{Q_m}, the new estimator of the between-study variance \eqn{\hat{\tau}_m^2} is the solution to
 \deqn{Q_m \sqrt{\pi/2} = \sum_{i = 1}^{n} \sqrt{(s_i^2 + \tau^2)/s_i^2}.}
 The counterparts of the \eqn{H} and \eqn{I^2} statistics are
 \deqn{H_m = \frac{Q_m}{n} \sqrt{\pi/2};}
@@ -80,13 +80,13 @@ This function returns a list containing p-values of various heterogeneity tests 
   \item{ci.Im2}{95\% CI of the \eqn{I_m^2} statistic.}
 }
 \references{
-DerSimonian R and Laird N (1986). "Meta-analysis in clinical trials." \emph{Controlled Clinical Trials}, \bold{7}(3), 177--88. <doi:10.1016/0197-2456(86)90046-2>
+DerSimonian R, Laird N (1986). "Meta-analysis in clinical trials." \emph{Controlled Clinical Trials}, \bold{7}(3), 177--188. <\doi{10.1016/0197-2456(86)90046-2}>
 
-Higgins JPT and Thompson SG (2002). "Quantifying heterogeneity in a meta-analysis." \emph{Statistics in Medicine}, \bold{21}(11), 1539--58. <doi:10.1002/sim.1186>
+Higgins JPT, Thompson SG (2002). "Quantifying heterogeneity in a meta-analysis." \emph{Statistics in Medicine}, \bold{21}(11), 1539--1558. <\doi{10.1002/sim.1186}>
 
-Higgins JPT, Thompson SG, Deeks JJ, and Altman DG (2003). "Measuring inconsistency in meta-analyses." \emph{BMJ}, \bold{327}(7414), 557--60. <doi:10.1136/bmj.327.7414.557>
+Higgins JPT, Thompson SG, Deeks JJ, Altman DG (2003). "Measuring inconsistency in meta-analyses." \emph{BMJ}, \bold{327}(7414), 557--560. <\doi{10.1136/bmj.327.7414.557}>
 
-Lin L, Chu H, and Hodges JS (2017). "Alternative measures of between-study heterogeneity in meta-analysis: reducing the impact of outlying studies." \emph{Biometrics}, \bold{73}(1), 156--166. <doi:10.1111/biom.12543>
+Lin L, Chu H, Hodges JS (2017). "Alternative measures of between-study heterogeneity in meta-analysis: reducing the impact of outlying studies." \emph{Biometrics}, \bold{73}(1), 156--166. <\doi{10.1111/biom.12543}>
 }
 
 
@@ -95,13 +95,14 @@ data("dat.aex")
 set.seed(1234)
 attach(dat.aex)
 metahet(y, s2, 100)
-#metahet(y, s2, 1000)
+\donttest{metahet(y, s2, 1000)}
 detach(dat.aex)
 
 data("dat.hipfrac")
 set.seed(1234)
 attach(dat.hipfrac)
 metahet(y, s2, 100)
-#metahet(y, s2, 1000)
+\donttest{metahet(y, s2, 1000)}
 detach(dat.hipfrac)
 }
+\keyword{heterogeneity}

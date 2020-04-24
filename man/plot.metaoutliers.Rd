@@ -13,17 +13,21 @@ Draws a plot showing study-specific standardized residuals.
 
 \arguments{
   \item{x}{
-  an object created by the function \code{\link{metaoutliers}()}.
+  an object created by the function \code{\link{metaoutliers}}.
 }
   \item{xtick.cex}{
-  a numerical value indicating the magnification to be used for ticks on x-axis.
+  a numeric value indicating the magnification to be used for ticks on the x axis.
 }
   \item{ytick.cex}{
-  a numerical value indicating the magnification to be used for ticks on y-axis.
+  a numeric value indicating the magnification to be used for ticks on the y axis.
 }
   \item{...}{
-  Other arguments can be passed to \code{plot()} function.
+  Other arguments that can be passed to the function \code{\link[graphics]{plot}}.
 }
+}
+
+\value{
+None.
 }
 
 \seealso{
@@ -42,3 +46,5 @@ out.hipfrac <- metaoutliers(y, s2, model = "RE")
 detach(dat.hipfrac)
 plot(out.hipfrac)
 }
+\keyword{heterogeneity}
+\keyword{plot}

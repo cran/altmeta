@@ -2,7 +2,7 @@
 \alias{metapb}
 
 \title{
-Detect and Quantify Publication Bias
+Detecting and Quantifying Publication Bias
 }
 \description{
 Performs the regression test and calculates skewness for detecting and quantifying publication bias.
@@ -19,11 +19,11 @@ metapb(y, s2, model)
   a numeric vector indicating the within-study variances.
 }
   \item{model}{
-  a characher string specifying the fixed-effect (\code{"FE"}) or random-effects (\code{"RE"}) model. If not specified, this function uses the \eqn{Q} statistic to test for heterogeneity: if the \eqn{p}-value is smaller than 0.05, \code{model} is set to \code{"RE"}; otherwise, \code{model = "FE"}.
+  a characher string specifying the fixed-effect (\code{"FE"}) or random-effects (\code{"RE"}) model. If not specified, this function uses the \eqn{Q} statistic to test for heterogeneity: if the p-value is smaller than 0.05, \code{model} is set to \code{"RE"}; otherwise, \code{model = "FE"}.
 }
 }
 \details{
-This function derives the measures of publication bias considered in Lin and Chu (2018).
+This function derives the measures of publication bias introduced in Lin and Chu (2018).
 }
 \value{
 This function returns a list containing measures of publication bias, their 95\% confidence intervals, and p-values. Specifically, the components include:
@@ -42,9 +42,9 @@ This function returns a list containing measures of publication bias, their 95\%
   \item{combined.pval}{the p-value of the combined test that incorporates the regression intercept and the skewness.}
 }
 \references{
-Egger M, Smith GD, Schneider M, and Minder C (1997). "Bias in meta-analysis detected by a simple, graphical test." \emph{BMJ}, \bold{315}(7109), 629--34. <doi:10.1136/bmj.315.7109.629>
+Egger M, Davey Smith G, Schneider M, Minder C (1997). "Bias in meta-analysis detected by a simple, graphical test." \emph{BMJ}, \bold{315}(7109), 629--634. <\doi{10.1136/bmj.315.7109.629}>
 
-Lin L, Chu H (2018). "Quantifying publication bias in meta-analysis." \emph{Biometrics}, \bold{74}(3), 785--794. <doi:10.1111/biom.12817>
+Lin L, Chu H (2018). "Quantifying publication bias in meta-analysis." \emph{Biometrics}, \bold{74}(3), 785--794. <\doi{10.1111/biom.12817}>
 }
 
 %%\note{
@@ -67,3 +67,4 @@ attach(dat.lcj)
 metapb(y, s2)
 detach(dat.lcj)
 }
+\keyword{publication bias}
