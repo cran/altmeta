@@ -21,6 +21,7 @@ maprop.glmm <- function(e, n, data, link = "logit",
   mu.ci <- c(mu.est - qnorm(1 - alpha/2) * mu.se,
     mu.est + qnorm(1 - alpha/2) * mu.se)
   tau.est <- sqrt(as.numeric(summary(rslt)$varcor))
+  AICtab <- summary(rslt)$AICtab
   if(link == "log"){
     back.trans <- function(x) exp(x)
   }
@@ -39,7 +40,7 @@ maprop.glmm <- function(e, n, data, link = "logit",
   back.trans <- Vectorize(back.trans)
   prop.c.est <- back.trans(mu.est)
   prop.c.ci <- back.trans(mu.ci)
-  out <- list(prop.c.est = prop.c.est, prop.c.ci = prop.c.ci)
+  out <- list(prop.c.est = prop.c.est, prop.c.ci = prop.c.ci, AICtab = AICtab)
   if(pop.avg){
     if(link == "probit"){
       prop.m.est <- pnorm(mu.est/sqrt(1 + tau.est^2))

@@ -66,7 +66,7 @@ Thompson SG, Sharp SJ (1999). "Explaining heterogeneity in meta-analysis: a comp
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-\code{\link{pb.hybrid.binary}}
+\code{\link{pb.bayesian.binary}}, \code{\link{pb.hybrid.binary}}
 }
 \examples{
 ## meta-analysis of mean differences
@@ -80,14 +80,8 @@ out.plourde
 set.seed(1234)
 pb.hybrid.generic(y = y, s2 = s2, n = n,
   data = dat.plourde, iter.resam = 10, theo.pval = FALSE)
-\donttest{
 # increases the number of resampling iterations to 10000,
 #  taking longer time
-set.seed(1234)
-out.plourde <- pb.hybrid.generic(y = y, s2 = s2, n = n,
-  data = dat.plourde, iter.resam = 10000)
-out.plourde
-}
 
 ## meta-analysis of standardized mean differences
 data("dat.paige")
@@ -96,13 +90,7 @@ set.seed(1234)
 out.paige <- pb.hybrid.generic(y = y, s2 = s2, n = n,
   data = dat.paige, iter.resam = 10)
 out.paige
-\donttest{
 # increases the number of resampling iterations to 10000,
 #  taking longer time
-set.seed(1234)
-out.paige <- pb.hybrid.generic(y = y, s2 = s2, n = n,
-  data = dat.paige, iter.resam = 10000)
-out.paige
-}
 }
 \keyword{publication bias}

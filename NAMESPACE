@@ -1,5 +1,5 @@
 S3method(plot, metaoutliers)
-export(maprop.glmm, maprop.twostep, metahet, metaoutliers, metapb, mvma, mvma.bayesian, mvma.hybrid, mvma.hybrid.bayesian, pb.hybrid.binary, pb.hybrid.generic, ssfunnel)
+export(maprop.glmm, maprop.twostep, metahet, metaoutliers, metapb, mvma, mvma.bayesian, mvma.hybrid, mvma.hybrid.bayesian, pb.bayesian.binary, pb.hybrid.binary, pb.hybrid.generic, ssfunnel)
 
 import("rjags")
 importFrom("coda", "gelman.diag")

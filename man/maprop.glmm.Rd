@@ -45,7 +45,7 @@ maprop.glmm(e, n, data, link = "logit", alpha = 0.05,
 %%  ~~ If necessary, more details than the description above ~~
 %%}
 \value{
-This function returns a list containing the point and interval estimates of the overall proportion. Specifically, \code{prop.c.est} is the commonly-reported median (or conditional) proportion, and \code{prop.c.ci} is its confidence interval. If \code{pop.avg} = \code{TRUE}, the following additional elements will be also in the produced list: \code{prop.c.ci.b} is the bootstrap confidence interval of the commonly-reported median (conditional) proportion, \code{prop.m.est} is the point estimate of the population-averaged (marginal) proportion, \code{prop.m.ci.b} is the bootstrap confidence interval of the population-averaged (marginal) proportion, and \code{b.w.e} is a vector of two numeric values, indicating the counts of warnings and errors occurred during the bootstrap iterations.
+This function returns a list containing the point and interval estimates of the overall proportion. Specifically, \code{prop.c.est} is the commonly-reported median (or conditional) proportion, and \code{prop.c.ci} is its confidence interval. It also returns information about AIC, BIC, log likelihood, deviance, and residual degrees-of-freedom. If \code{pop.avg} = \code{TRUE}, the following additional elements will be also in the produced list: \code{prop.c.ci.b} is the bootstrap confidence interval of the commonly-reported median (conditional) proportion, \code{prop.m.est} is the point estimate of the population-averaged (marginal) proportion, \code{prop.m.ci.b} is the bootstrap confidence interval of the population-averaged (marginal) proportion, and \code{b.w.e} is a vector of two numeric values, indicating the counts of warnings and errors occurred during the bootstrap iterations.
 }
 \references{
 Agresti A (2013). \emph{Categorical Data Analysis}. Third edition. John Wiley & Sons, Hoboken, NJ.
@@ -56,7 +56,7 @@ Chu H, Nie L, Chen Y, Huang Y, Sun W (2012). "Bivariate random effects models fo
 
 Hamza TH, van Houwelingen HC, Stijnen T (2008). "The binomial distribution of meta-analysis was preferred to model within-study variability." \emph{Journal of Clinical Epidemiology}, \bold{61}(1), 41--51. <\doi{10.1016/j.jclinepi.2007.03.016}>
 
-Lin L, Chu H (2020). "Meta-analysis of proportions using generalized linear mixed models." \emph{Epidemiology}, in press.
+Lin L, Chu H (2020). "Meta-analysis of proportions using generalized linear mixed models." \emph{Epidemiology}, in press. <\doi{10.1097/ede.0000000000001232}>
 
 Stijnen T, Hamza TH, Ozdemir P (2010). "Random effects meta-analysis of event outcome in the framework of the generalized linear mixed model with applications in sparse data." \emph{Statistics in Medicine}, \bold{29}(29), 3046--3067. <\doi{10.1002/sim.4040}>
 
@@ -92,40 +92,41 @@ out.chor.glmm.logit
 out.chor.glmm.logit <- maprop.glmm(e, n, data = dat.chor,
   link = "logit", b.iter = 1000, seed = 1234)
 out.chor.glmm.logit
+
 # GLMM with the log link
 out.chor.glmm.log <- maprop.glmm(e, n, data = dat.chor,
-  link = "log", b.iter = 1000, seed = 1234)
+  link = "log", b.iter = 10, seed = 1234)
 out.chor.glmm.log
 # GLMM with the probit link
 out.chor.glmm.probit <- maprop.glmm(e, n, data = dat.chor,
-  link = "probit", b.iter = 1000, seed = 1234)
+  link = "probit", b.iter = 10, seed = 1234)
 out.chor.glmm.probit
 # GLMM with the cauchit link
 out.chor.glmm.cauchit <- maprop.glmm(e, n, data = dat.chor,
-  link = "cauchit", b.iter = 1000, seed = 1234)
+  link = "cauchit", b.iter = 10, seed = 1234)
 out.chor.glmm.cauchit
 # GLMM with the cloglog link
 out.chor.glmm.cloglog <- maprop.glmm(e, n, data = dat.chor,
-  link = "cloglog", b.iter = 1000, seed = 1234)
+  link = "cloglog", b.iter = 10, seed = 1234)
 out.chor.glmm.cloglog
-}
-\donttest{
+
+
 # depression data
 data("dat.beck17")
 out.beck17.glmm.log <- maprop.glmm(e, n, data = dat.beck17,
-  link = "log", b.iter = 1000, seed = 1234)
+  link = "log", b.iter = 10, seed = 1234)
 out.beck17.glmm.log
 out.beck17.glmm.logit <- maprop.glmm(e, n, data = dat.beck17,
-  link = "logit", b.iter = 1000, seed = 1234)
+  link = "logit", b.iter = 10, seed = 1234)
 out.beck17.glmm.logit
 out.beck17.glmm.probit <- maprop.glmm(e, n, data = dat.beck17,
-  link = "probit", b.iter = 1000, seed = 1234)
+  link = "probit", b.iter = 10, seed = 1234)
 out.beck17.glmm.probit
 out.beck17.glmm.cauchit <- maprop.glmm(e, n, data = dat.beck17,
-  link = "cauchit", b.iter = 1000, seed = 1234)
+  link = "cauchit", b.iter = 10, seed = 1234)
 out.beck17.glmm.cauchit
 out.beck17.glmm.cloglog<- maprop.glmm(e, n, data = dat.beck17,
-  link = "cloglog", b.iter = 1000, seed = 1234)
+  link = "cloglog", b.iter = 10, seed = 1234)
 out.beck17.glmm.cloglog
 }
 }

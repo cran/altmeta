@@ -10,7 +10,7 @@ Performs a Bayesian random-effects model for multivariate meta-analysis when the
 \usage{
 mvma.bayesian(ys, covs, n.adapt = 1000, n.chains = 3,
               n.burnin = 10000, n.iter = 10000, n.thin = 1,
-              data.name = NULL, traceplot = TRUE, coda = FALSE)
+              data.name = NULL, traceplot = FALSE, coda = FALSE)
 }
 
 \arguments{
@@ -21,7 +21,7 @@ mvma.bayesian(ys, covs, n.adapt = 1000, n.chains = 3,
   a numeric list with length n. Each element is the p x p within-study covariance matrix. \code{NA} is allowed for missing endpoints in the covariance matrix.
 }
   \item{n.adapt}{
-  the number of iterations for adaptation in the Markov chain Monte Carlo (MCMC) algorithm. The default is 1,000. This argument and the following \code{n.chains}, \code{n.burnin}, \code{n.iter}, \code{n.thin} are passed to the functions in the package \pkg{rjags}.
+  the number of iterations for adaptation in the Markov chain Monte Carlo (MCMC) algorithm. The default is 1,000. This argument and the following \code{n.chains}, \code{n.burnin}, \code{n.iter}, and \code{n.thin} are passed to the functions in the package \pkg{rjags}.
 }
   \item{n.chains}{
   the number of MCMC chains. The default is 3.
@@ -39,7 +39,7 @@ mvma.bayesian(ys, covs, n.adapt = 1000, n.chains = 3,
   a character string indicating the data name. This is used in the names of the generated files that contain results. The default is \code{NULL}.
 }
   \item{traceplot}{
-  a logical value indicating whether to save trace plots for the overall effect sizes and between-study standard deviations. The default is \code{TRUE}.
+  a logical value indicating whether to save trace plots for the overall effect sizes and between-study standard deviations. The default is \code{FALSE}.
 }
   \item{coda}{
   a logical value indicating whether to output MCMC posterior samples. The default is \code{FALSE}.
@@ -54,7 +54,7 @@ Here, \eqn{\boldsymbol{\mu}_i} represents the true underlying effect sizes in st
 The vague priors \eqn{N (0, 10^3)} are specified for the fixed effects \eqn{\boldsymbol{\mu}}. Also, this function uses the separation strategy to specify vague priors for the variance and correlation components in \eqn{\mathbf{T}} (Pinheiro and Bates, 1996); this technique is considered less sensitive to hyperparameters compared to specifying the inverse-Wishart prior (Lu and Ades, 2009; Wei and Higgins, 2013). Specifically, write the between-study covariance matrix as \eqn{\mathbf{T} = \mathbf{D}^{1/2} \mathbf{R} \mathbf{D}^{1/2}}, where the diagonal matrix \eqn{\mathbf{D} = diag(\mathbf{T}) = diag(\tau_1^2, \ldots, \tau_p^2)} contains the between-study variances, and \eqn{\mathbf{R}} is the correlation matrix. Uniform priors \eqn{U (0, 10)} are specified for \eqn{\tau_j}'s (\eqn{j = 1, \ldots, p}). Further, the correlation matrix can be written as \eqn{\mathbf{R} = \mathbf{L} \mathbf{L}^T}, where \eqn{\mathbf{L} = (L_{ij})} is a lower triangular matrix with nonnegative diagonal elements. Also, \eqn{L_{11} = 1} and for \eqn{i = 2, \ldots, p}, \eqn{L_{ij} = \cos \theta_{i2}} if \eqn{j = 1}; \eqn{L_{ij} = (\prod_{k = 2}^{j} \sin \theta_{ik}) \cos \theta_{i, j + 1}} if \eqn{j = 2, \ldots, i - 1}; and \eqn{L_{ij} = \prod_{k = 2}^{i} \sin \theta_{ik}} if \eqn{j = i}. Here, \eqn{\theta_{ij}}'s are angle parameters for \eqn{2 \leq j \leq i \leq p}, and \eqn{\theta_{ij} \in (0, \pi)}. Uniform priors are specified for the angle parameters: \eqn{\theta_{ij} \sim U (0, \pi)}.
 }
 \value{
-This functions generates several files that contain posterior estimates, Gelman and Rubin's potential scale reduction factor, trace plots (if \code{traceplot} = \code{TRUE}), and MCMC posterior samples (if \code{coda} = \code{TRUE}) in users' working directory. In these files, \code{mu} represents the overall effect sizes, \code{tau} represents the between-study variances, \code{R} contains the elements of the correlation matrix, and \code{theta} represents the angle parameters (see "Details").
+This functions produces posterior estimates and Gelman and Rubin's potential scale reduction factor, and it generates several files that contain trace plots (if \code{traceplot} = \code{TRUE}) and MCMC posterior samples (if \code{coda} = \code{TRUE}) in users' working directory. In these results, \code{mu} represents the overall effect sizes, \code{tau} represents the between-study variances, \code{R} contains the elements of the correlation matrix, and \code{theta} represents the angle parameters (see "Details").
 }
 \references{
 Gelman A, Rubin DB (1992). "Inference from iterative simulation using multiple sequences." \emph{Statistical Science}, \bold{7}(4), 457--472. <\doi{10.1214/ss/1177011136}>
@@ -81,10 +81,11 @@ If a warning "adaptation incomplete" appears, users may increase \code{n.adapt}.
 \donttest{
 data("dat.fib")
 set.seed(12345)
-## increase n.burnin and n.iter to reach convergence of MCMC
-mvma.bayesian(ys = dat.fib$y, covs = dat.fib$S, n.adapt = 1000,
-  n.chains = 3, n.burnin = 100, n.iter = 100, n.thin = 1,
-  data.name = "Fibrinogen")
+## increase n.burnin and n.iter for better convergence of MCMC
+out <- mvma.bayesian(ys = dat.fib$y, covs = dat.fib$S,
+  n.adapt = 1000, n.chains = 3, n.burnin = 100, n.iter = 100,
+  n.thin = 1, data.name = "Fibrinogen")
+out
 }
 }
 \keyword{multivariate meta-analysis}

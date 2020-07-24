@@ -10,7 +10,7 @@ Performs a multivariate meta-analysis using the Bayesian hybrid random-effects m
 \usage{
 mvma.hybrid.bayesian(ys, vars, n.adapt = 1000, n.chains = 3,
                      n.burnin = 10000, n.iter = 10000, n.thin = 1,
-                     data.name = NULL, traceplot = TRUE, coda = FALSE)
+                     data.name = NULL, traceplot = FALSE, coda = FALSE)
 }
 
 \arguments{
@@ -21,7 +21,7 @@ mvma.hybrid.bayesian(ys, vars, n.adapt = 1000, n.chains = 3,
   an n x p numeric matrix containing the observed within-study variances. The n rows represent studies, and the p columns represent the multivariate endpoints. \code{NA} is allowed for missing endpoints.
 }
   \item{n.adapt}{
-  the number of iterations for adaptation in the Markov chain Monte Carlo (MCMC) algorithm. The default is 1,000. This argument and the following \code{n.chains}, \code{n.burnin}, \code{n.iter}, \code{n.thin} are passed to the functions in the package \pkg{rjags}.
+  the number of iterations for adaptation in the Markov chain Monte Carlo (MCMC) algorithm. The default is 1,000. This argument and the following \code{n.chains}, \code{n.burnin}, \code{n.iter}, and \code{n.thin} are passed to the functions in the package \pkg{rjags}.
 }
   \item{n.chains}{
   the number of MCMC chains. The default is 3.
@@ -39,7 +39,7 @@ mvma.hybrid.bayesian(ys, vars, n.adapt = 1000, n.chains = 3,
   a character string indicating the data name. This is used in the names of the generated files that contain results. The default is \code{NULL}.
 }
   \item{traceplot}{
-  a logical value indicating whether to save trace plots for the overall effect sizes and between-study standard deviations. The default is \code{TRUE}.
+  a logical value indicating whether to save trace plots for the overall effect sizes and between-study standard deviations. The default is \code{FALSE}.
 }
   \item{coda}{
   a logical value indicating whether to output MCMC posterior samples. The default is \code{FALSE}.
@@ -53,7 +53,7 @@ where \eqn{\boldsymbol{\mu}} represents the overall effect sizes across studies,
 Uniform priors \eqn{U (0, 10)} are specified for the between-study standard deviations \eqn{\tau_j} (\eqn{j = 1, \ldots, p}). The correlation matrix can be written as \eqn{\mathbf{R} = \mathbf{L} \mathbf{L}^T}, where \eqn{\mathbf{L} = (L_{ij})} is a lower triangular matrix with nonnegative diagonal elements. Also, \eqn{L_{11} = 1} and for \eqn{i = 2, \ldots, p}, \eqn{L_{ij} = \cos \theta_{i2}} if \eqn{j = 1}; \eqn{L_{ij} = (\prod_{k = 2}^{j} \sin \theta_{ik}) \cos \theta_{i, j + 1}} if \eqn{j = 2, \ldots, i - 1}; and \eqn{L_{ij} = \prod_{k = 2}^{i} \sin \theta_{ik}} if \eqn{j = i} (Lu and Ades, 2009; Wei and Higgins, 2013). Here, \eqn{\theta_{ij}}'s are angle parameters for \eqn{2 \leq j \leq i \leq p}, and \eqn{\theta_{ij} \in (0, \pi)}. Uniform priors are specified for the angle parameters: \eqn{\theta_{ij} \sim U (0, \pi)}.
 }
 \value{
-This functions generates several files that contain posterior estimates, Gelman and Rubin's potential scale reduction factor, trace plots (if \code{traceplot} = \code{TRUE}), and MCMC posterior samples (if \code{coda} = \code{TRUE}) in users' working directory. In these files, \code{mu} represents the overall effect sizes, \code{tau} represents the between-study variances, \code{R} contains the elements of the correlation matrix, and \code{theta} represents the angle parameters (see "Details").
+This functions produces posterior estimates and Gelman and Rubin's potential scale reduction factor, and it generates several files that contain trace plots (if \code{traceplot} = \code{TRUE}), and MCMC posterior samples (if \code{coda} = \code{TRUE}) in users' working directory. In these results, \code{mu} represents the overall effect sizes, \code{tau} represents the between-study variances, \code{R} contains the elements of the correlation matrix, and \code{theta} represents the angle parameters (see "Details").
 }
 \references{
 Lin L, Chu H (2018), "Bayesian multivariate meta-analysis of multiple factors." \emph{Research Synthesis Methods}, \bold{9}(2), 261--272. <\doi{10.1002/jrsm.1293}>
@@ -72,10 +72,11 @@ Wei Y, Higgins JPT (2013). "Bayesian multivariate meta-analysis with multiple ou
 \donttest{
 data("dat.pte")
 set.seed(12345)
-## increase n.burnin and n.iter to reach convergence of MCMC
-mvma.hybrid.bayesian(ys = dat.pte$y, vars = (dat.pte$se)^2, n.adapt = 1000,
-  n.chains = 3, n.burnin = 100, n.iter = 100,
+## increase n.burnin and n.iter for better convergence of MCMC
+out <- mvma.hybrid.bayesian(ys = dat.pte$y, vars = (dat.pte$se)^2,
+  n.adapt = 1000, n.chains = 3, n.burnin = 100, n.iter = 100,
   n.thin = 1, data.name = "Pterygium")
+out
 }
 }
 \keyword{multivariate meta-analysis}

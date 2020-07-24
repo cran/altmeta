@@ -1,4 +1,4 @@
-mvma.bayesian <- function(ys, covs, n.adapt = 1000, n.chains = 3, n.burnin = 10000, n.iter = 10000, n.thin = 1, data.name = NULL, traceplot = TRUE, coda = FALSE){
+mvma.bayesian <- function(ys, covs, n.adapt = 1000, n.chains = 3, n.burnin = 10000, n.iter = 10000, n.thin = 1, data.name = NULL, traceplot = FALSE, coda = FALSE){
 	ys <- as.matrix(ys)
 	n <- dim(ys)[1]
 	m <- dim(ys)[2]
@@ -98,21 +98,17 @@ mvma.bayesian <- function(ys, covs, n.adapt = 1000, n.chains = 3, n.burnin = 100
 	smry <- summary(jags.out)
 	smry <- cbind(smry$statistics[,c("Mean", "SD")], smry$quantiles[,c("2.5%", "50%", "97.5%")])
 	if(is.null(data.name)){
-		smry.file <- "M_summary.txt"
-		conv.file <- "M_convdiag.txt"
 		trace.prefix <- "M_Traceplot_"
 		coda.prefix <- "M_Coda_mu_"
 	}else{
-		smry.file <- paste(data.name, "_M_summary.txt", sep = "")
-		conv.file <- paste(data.name, "_M_convdiag.txt", sep = "")
 		trace.prefix <- paste(data.name, "_M_Traceplot_", sep = "")
 		coda.prefix <- paste(data.name, "_M_Coda_mu_", sep = "")
 	}
-	write.table(smry, smry.file, row.names = rownames(smry), col.names = colnames(smry))
 
 	conv.out <- gelman.diag(jags.out, multivariate = FALSE)
 	conv.out <- conv.out$psrf
-	write.table(conv.out, conv.file, row.names = rownames(conv.out), col.names = TRUE)
+
+        out <- list(smry = smry, conv = conv.out)
 
 	if(traceplot){
 		for(i in 1:m){
@@ -143,4 +139,6 @@ mvma.bayesian <- function(ys, covs, n.adapt = 1000, n.chains = 3, n.burnin = 100
 				paste(coda.prefix, i, ".txt", sep = ""), row.names = FALSE, col.names = FALSE)
 		}
 	}
+
+	return(out)
 }

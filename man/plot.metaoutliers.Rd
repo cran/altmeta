@@ -22,7 +22,7 @@ Draws a plot showing study-specific standardized residuals.
   a numeric value indicating the magnification to be used for ticks on the y axis.
 }
   \item{...}{
-  Other arguments that can be passed to the function \code{\link[graphics]{plot}}.
+  Other arguments that can be passed to the function \code{\link[graphics]{plot.default}}.
 }
 }
 

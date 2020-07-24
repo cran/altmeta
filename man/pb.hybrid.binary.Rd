@@ -81,7 +81,7 @@ Thompson SG, Sharp SJ (1999). "Explaining heterogeneity in meta-analysis: a comp
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-\code{\link{pb.hybrid.generic}}
+\code{\link{pb.bayesian.binary}}, \code{\link{pb.hybrid.generic}}
 }
 \examples{
 ## meta-analysis of (log) odds ratios
@@ -91,13 +91,7 @@ set.seed(1234)
 out.whiting <- pb.hybrid.binary(n00 = n00, n01 = n01,
   n10 = n10, n11 = n11, data = dat.whiting, iter.resam = 10)
 out.whiting
-\donttest{
 # increases the number of resampling iterations to 10000,
 #  taking longer time
-set.seed(1234)
-out.whiting <- pb.hybrid.binary(n00 = n00, n01 = n01,
-  n10 = n10, n11 = n11, data = dat.whiting, iter.resam = 10000)
-out.whiting
-}
 }
 \keyword{publication bias}

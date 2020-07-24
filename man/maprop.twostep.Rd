@@ -26,7 +26,7 @@ maprop.twostep(e, n, data, link = "logit", method = "ML", alpha = 0.05,
   a character string specifying the data transformation for each study's proportion used in the two-step method, which can be one of \code{"log"} (log transformation), \code{"logit"} (logit transformation, the default), \code{"arcsine"} (arcsine transformation), and \code{"double.arcsine"} (Freeman--Tukey double-arcsine transformation).
 }
   \item{method}{
-  a character string specifying the method to perform the meta-analysis, which is passed to the argument \code{method} in the function \code{\link[metafor]{rma}} in the package \pkg{metafor}. It can be one of \code{"ML"} (maximum likelihood, the default), \code{"REML"} (restricted maximum likelihood), and many other options; see more details in the manual of \pkg{metafor}. The default is set to \code{"ML"} for consistency with the function \code{\link{maprop.glmm}}, where generalized linear mixed models are often estimated via the maximum likelihood approach. For the two-step method, users might also use \code{"REML"} because the restricted maximum likelihood estimation may have superior performance in many cases.
+  a character string specifying the method to perform the meta-analysis, which is passed to the argument \code{method} in the function \code{\link[metafor]{rma.uni}} in the package \pkg{metafor}. It can be one of \code{"ML"} (maximum likelihood, the default), \code{"REML"} (restricted maximum likelihood), and many other options; see more details in the manual of \pkg{metafor}. The default is set to \code{"ML"} for consistency with the function \code{\link{maprop.glmm}}, where generalized linear mixed models are often estimated via the maximum likelihood approach. For the two-step method, users might also use \code{"REML"} because the restricted maximum likelihood estimation may have superior performance in many cases.
 }
   \item{alpha}{
   a numeric value indicating the statistical significance level.
@@ -57,7 +57,7 @@ Barendregt JJ, Doi SA, Lee YY, Norman RE, Vos T (2013). "Meta-analysis of preval
 
 Freeman MF, Tukey JW (1950). "Transformations related to the angular and the square root." \emph{The Annals of Mathematical Statistics}, \bold{21}(4), 607--611. <\doi{10.1214/aoms/1177729756}>
 
-Lin L, Chu H (2020). "Meta-analysis of proportions using generalized linear mixed models." \emph{Epidemiology}, in press.
+Lin L, Chu H (2020). "Meta-analysis of proportions using generalized linear mixed models." \emph{Epidemiology}, in press. <\doi{10.1097/ede.0000000000001232}>
 
 Miller JJ (1978). "The inverse of the Freeman--Tukey double arcsine transformation." \emph{The American Statistician}, \bold{32}(4), 138. <\doi{10.1080/00031305.1978.10479283}>
 
@@ -71,7 +71,7 @@ Zeger SL, Liang K-Y, Albert PS (1988). "Models for longitudinal data: a generali
 %%  ~~who you are~~
 %%}
 \note{
-This function implements the two-step method for the meta-analysis of proportions via the \code{\link[metafor]{rma}} function in the package \pkg{metafor}. It is possible that the algorithm of the maximum likelihood or restricted maximum likelihood estimation may not converge for some bootstrapped meta-analyses when \code{pop.avg} = \code{TRUE}, and the \code{\link[metafor]{rma}} function may report warnings or errors about the convergence issue. The bootstrap iterations are continued until \code{b.iter} replicates without any warnings or errors are obtained; those replicates with any warnings or errors are discarded.
+This function implements the two-step method for the meta-analysis of proportions via the \code{\link[metafor]{rma.uni}} function in the package \pkg{metafor}. It is possible that the algorithm of the maximum likelihood or restricted maximum likelihood estimation may not converge for some bootstrapped meta-analyses when \code{pop.avg} = \code{TRUE}, and the \code{\link[metafor]{rma.uni}} function may report warnings or errors about the convergence issue. The bootstrap iterations are continued until \code{b.iter} replicates without any warnings or errors are obtained; those replicates with any warnings or errors are discarded.
 }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
@@ -97,33 +97,34 @@ out.chor.twostep.logit
 out.chor.twostep.logit <- maprop.twostep(e, n, data = dat.chor,
   link = "logit", b.iter = 1000, seed = 1234)
 out.chor.twostep.logit
+
 # two-step method with the log transformation
 out.chor.twostep.log <- maprop.twostep(e, n, data = dat.chor,
-  link = "log", b.iter = 1000, seed = 1234)
+  link = "log", b.iter = 10, seed = 1234)
 out.chor.twostep.log
 # two-step method with the arcsine transformation
 out.chor.twostep.arcsine <- maprop.twostep(e, n, data = dat.chor,
-  link = "arcsine", b.iter = 1000, seed = 1234)
+  link = "arcsine", b.iter = 10, seed = 1234)
 out.chor.twostep.arcsine
 # two-step method with the Freeman--Tukey double-arcsine transformation
 out.chor.twostep.double.arcsine <- maprop.twostep(e, n, data = dat.chor,
-  link = "double.arcsine", b.iter = 1000, seed = 1234)
+  link = "double.arcsine", b.iter = 10, seed = 1234)
 out.chor.twostep.double.arcsine
-}
-\donttest{
+
+
 # depression data
 data("dat.beck17")
 out.beck17.twostep.log <- maprop.twostep(e, n, data = dat.beck17,
-  link = "log", b.iter = 1000, seed = 1234)
+  link = "log", b.iter = 10, seed = 1234)
 out.beck17.twostep.log
 out.beck17.twostep.logit <- maprop.twostep(e, n, data = dat.beck17,
-  link = "logit", b.iter = 1000, seed = 1234)
+  link = "logit", b.iter = 10, seed = 1234)
 out.beck17.twostep.logit
 out.beck17.twostep.arcsine <- maprop.twostep(e, n, data = dat.beck17,
-  link = "arcsine", b.iter = 1000, seed = 1234)
+  link = "arcsine", b.iter = 10, seed = 1234)
 out.beck17.twostep.arcsine
 out.beck17.twostep.double.arcsine <- maprop.twostep(e, n, data = dat.beck17,
-  link = "double.arcsine", b.iter = 1000, seed = 1234)
+  link = "double.arcsine", b.iter = 10, seed = 1234)
 out.beck17.twostep.double.arcsine
 }
 }

@@ -1,4 +1,4 @@
-mvma.hybrid.bayesian <- function(ys, vars, n.adapt = 1000, n.chains = 3, n.burnin = 10000, n.iter = 10000, n.thin = 1, data.name = NULL, traceplot = TRUE, coda = FALSE){
+mvma.hybrid.bayesian <- function(ys, vars, n.adapt = 1000, n.chains = 3, n.burnin = 10000, n.iter = 10000, n.thin = 1, data.name = NULL, traceplot = FALSE, coda = FALSE){
 	ys <- as.matrix(ys)
 	vars <- as.matrix(vars)
 	n <- dim(ys)[1]
@@ -96,21 +96,17 @@ mvma.hybrid.bayesian <- function(ys, vars, n.adapt = 1000, n.chains = 3, n.burni
 	smry <- summary(jags.out)
 	smry <- cbind(smry$statistics[,c("Mean", "SD")], smry$quantiles[,c("2.5%", "50%", "97.5%")])
 	if(is.null(data.name)){
-		smry.file <- "H_summary.txt"
-		conv.file <- "H_convdiag.txt"
 		trace.prefix <- "H_Traceplot_"
 		coda.prefix <- "H_Coda_mu_"
 	}else{
-		smry.file <- paste(data.name, "_H_summary.txt", sep = "")
-		conv.file <- paste(data.name, "_H_convdiag.txt", sep = "")
 		trace.prefix <- paste(data.name, "_H_Traceplot_", sep = "")
 		coda.prefix <- paste(data.name, "_H_Coda_mu_", sep = "")
 	}
-	write.table(smry, smry.file, row.names = rownames(smry), col.names = colnames(smry))
 
 	conv.out <- gelman.diag(jags.out, multivariate = FALSE)
 	conv.out <- conv.out$psrf
-	write.table(conv.out, conv.file, row.names = rownames(conv.out), col.names = TRUE)
+
+        out <- list(smry = smry, conv = conv.out)
 
 	if(traceplot){
 		for(i in 1:m){
@@ -141,4 +137,6 @@ mvma.hybrid.bayesian <- function(ys, vars, n.adapt = 1000, n.chains = 3, n.burni
 				paste(coda.prefix, i, ".txt", sep = ""), row.names = FALSE, col.names = FALSE)
 		}
 	}
+
+	return(out)
 }

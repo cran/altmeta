@@ -19,7 +19,7 @@ metapb(y, s2, model)
   a numeric vector indicating the within-study variances.
 }
   \item{model}{
-  a characher string specifying the fixed-effect (\code{"FE"}) or random-effects (\code{"RE"}) model. If not specified, this function uses the \eqn{Q} statistic to test for heterogeneity: if the p-value is smaller than 0.05, \code{model} is set to \code{"RE"}; otherwise, \code{model = "FE"}.
+  a characher string specifying the fixed-effect (\code{"FE"}) or random-effects (\code{"RE"}) model. If not specified, this function uses the \eqn{Q} statistic to test for heterogeneity: if the p-value is smaller than 0.05, \code{model} is set to \code{"RE"}; otherwise, \code{model} = \code{"FE"}.
 }
 }
 \details{
