@@ -15,31 +15,31 @@ ssfunnel(y, s2, n, data, type, alpha = c(0.1, 0.05, 0.01, 0.001),
 }
 \arguments{
   \item{y}{
-  a numeric vector or the corresponding column name in the argument \code{data}, indicating the observed effect sizes in the collected studies.
+  a numeric vector or the corresponding column name in the argument \code{data}, specifying the observed effect sizes in the collected studies.
 }
   \item{s2}{
-  a numeric vector or the corresponding column name in the argument \code{data}, indicating the within-study variances.
+  a numeric vector or the corresponding column name in the argument \code{data}, specifying the within-study variances.
 }
   \item{n}{
-  a numeric vector or the corresponding column name in the argument \code{data}, indicating the study-specific total sample sizes.
+  a numeric vector or the corresponding column name in the argument \code{data}, specifying the study-specific total sample sizes.
 }
   \item{data}{
   an optional data frame containing the meta-analysis dataset. If \code{data} is specified, the previous arguments, \code{y}, \code{s2}, and \code{n}, should be specified as their corresponding column names in \code{data}.
 }
   \item{type}{
-  a character string indicating the type of effect size, which should be one of \code{"md"} (mean difference), \code{"smd"} (standardized mean difference), \code{"lor"} (log odds ratio), \code{"lrr"} (log relative risk), and \code{"rd"} (risk difference).
+  a character string specifying the type of effect size, which should be one of \code{"md"} (mean difference), \code{"smd"} (standardized mean difference), \code{"lor"} (log odds ratio), \code{"lrr"} (log relative risk), and \code{"rd"} (risk difference).
 }
   \item{alpha}{
-  a numeric vector indicating the significance levels to be presented in the sample-size-based funnel plot.
+  a numeric vector specifying the significance levels to be presented in the sample-size-based funnel plot.
 }
   \item{log.ss}{
   a logical value indicating whether sample sizes are plotted on a logarithmic scale (\code{TRUE}) or not (\code{FALSE}, the default).
 }
   \item{sigma}{
-  a positive numeric value that is required for the mean difference (\code{type} = \code{"md"}), indicating a rough estimate of the common standard deviation of the samples' continuous outcomes in the two groups across studies. It is not used for other effect size types.
+  a positive numeric value that is required for the mean difference (\code{type} = \code{"md"}), specifying a rough estimate of the common standard deviation of the samples' continuous outcomes in the two groups across studies. It is not used for other effect size types.
 }
   \item{p0}{
-  an optional numeric value indicating a rough estimate of the common event rate in the control group across studies. It is only used for the (log) odds ratio, (log) relative risk, and risk difference.
+  an optional numeric value specifying a rough estimate of the common event rate in the control group across studies. It is only used for the (log) odds ratio, (log) relative risk, and risk difference.
 }
   \item{xlim}{
   the x limits \code{c(x1, x2)} of the plot.
@@ -57,7 +57,7 @@ ssfunnel(y, s2, n, data, type, alpha = c(0.1, 0.05, 0.01, 0.001),
   a vector of character strings; they indicate colors of the contours to be presented in the sample-size-based funnel plot, and correspond to the significance levels specified in the argument \code{alpha}.
 }
   \item{col.mostsig}{
-  a character string indicating the color for the most significant result among the studies in the meta-analysis.
+  a character string specifying the color for the most significant result among the studies in the meta-analysis.
 }
   \item{cex.pts}{
   the size of the points.
@@ -171,5 +171,5 @@ ssfunnel(y, s2, n, data = dat.kaner, type = "rd",
 ssfunnel(y, s2, n, data = dat.kaner, type = "rd",
   alpha = c(0.1, 0.05, 0.01, 0.001), p0 = 0.4, xlim = c(-0.5, 0.5))
 }
-\keyword{publication bias}
+\keyword{publication bias/small-study effects}
 \keyword{plot}

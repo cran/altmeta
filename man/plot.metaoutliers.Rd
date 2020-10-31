@@ -16,13 +16,13 @@ Draws a plot showing study-specific standardized residuals.
   an object created by the function \code{\link{metaoutliers}}.
 }
   \item{xtick.cex}{
-  a numeric value indicating the magnification to be used for ticks on the x axis.
+  a numeric value specifying the size of ticks on the x axis.
 }
   \item{ytick.cex}{
-  a numeric value indicating the magnification to be used for ticks on the y axis.
+  a numeric value specifying the size of ticks on the y axis.
 }
   \item{...}{
-  Other arguments that can be passed to the function \code{\link[graphics]{plot.default}}.
+  other arguments that can be passed to the function \code{\link[graphics]{plot.default}}.
 }
 }
 

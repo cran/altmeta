@@ -19,10 +19,10 @@ mvma.hybrid(ys, vars, method = "reml", tol = 1e-10)
   an n x p numeric matrix containing the observed within-study variances. The n rows represent studies, and the p columns represent the multivariate endpoints. \code{NA} is allowed for missing endpoints.
 }
   \item{method}{
-  a character string indicating the method for estimating the overall effect sizes. It should be \code{"ml"} (random-effects model using the maximum likelihood method) or \code{"reml"} (random-effects model using the restricted maximum likelihood method, the default).
+  a character string specifying the method for estimating the overall effect sizes. It should be \code{"ml"} (random-effects model using the maximum likelihood method) or \code{"reml"} (random-effects model using the restricted maximum likelihood method, the default).
 }
   \item{tol}{
-  a small number indicating the convergence tolerance for the estimates by maximizing (restricted) likelihood. The default is \code{1e-10}.
+  a small number specifying the convergence tolerance for the estimates by maximizing (restricted) likelihood. The default is \code{1e-10}.
 }
 }
 \details{

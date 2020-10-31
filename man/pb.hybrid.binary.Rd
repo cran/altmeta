@@ -2,10 +2,10 @@
 \alias{pb.hybrid.binary}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-Hybrid Test for Publication Bias in Meta-Analysis With Binary Outcomes
+Hybrid Test for Publication Bias/Small-Study Effects in Meta-Analysis With Binary Outcomes
 }
 \description{
-Performs the hybrid test for publication bias introduced in Lin (2020), which synthesizes results from multiple popular publication bias tests, in a meta-analysis with binary outcomes.
+Performs the hybrid test for publication bias/small-study effects introduced in Lin (2020), which synthesizes results from multiple popular publication bias tests, in a meta-analysis with binary outcomes.
 }
 \usage{
 pb.hybrid.binary(n00, n01, n10, n11, data, methods,
@@ -14,25 +14,25 @@ pb.hybrid.binary(n00, n01, n10, n11, data, methods,
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{n00}{
-  a numeric vector or the corresponding column name in the argument \code{data}, indicating the counts of non-events in treatment group 0 in the collected studies.
+  a numeric vector or the corresponding column name in the argument \code{data}, specifying the counts of non-events in treatment group 0 in the collected studies.
 }
   \item{n01}{
-  a numeric vector or the corresponding column name in the argument \code{data}, indicating the counts of events in treatment group 0 in the collected studies.
+  a numeric vector or the corresponding column name in the argument \code{data}, specifying the counts of events in treatment group 0 in the collected studies.
 }
   \item{n10}{
-  a numeric vector or the corresponding column name in the argument \code{data}, indicating the counts of non-events in treatment group 1 in the collected studies.
+  a numeric vector or the corresponding column name in the argument \code{data}, specifying the counts of non-events in treatment group 1 in the collected studies.
 }
   \item{n11}{
-  a numeric vector or the corresponding column name in the argument \code{data}, indicating the counts of events in treatment group 1 in the collected studies.
+  a numeric vector or the corresponding column name in the argument \code{data}, specifying the counts of events in treatment group 1 in the collected studies.
 }
   \item{data}{
   an optional data frame containing the meta-analysis dataset. If \code{data} is specified, the previous arguments, \code{n00}, \code{n01}, \code{n10}, and \code{n11}, should be specified as their corresponding column names in \code{data}.
 }
   \item{methods}{
-  a vector of character strings indicating the publication bias tests to be included in the hybrid test. They can be a subset of \code{"rank"} (Begg's rank test; see Begg and Mazumdar, 1994), \code{"reg"} (Egger's regression test under the fixed-effect setting; see Egger et al., 1997), \code{"reg.het"} (Egger's regression test accounting for additive heterogeneity), \code{"skew"} (the skewness-based test under the fixed-effect setting; see Lin and Chu, 2018), \code{"skew.het"} (the skewness-based test accounting for additive heterogeneity), \code{"inv.sqrt.n"} (the regression test based on sample sizes; see Tang and Liu, 2000), \code{"trimfill"} (the trim-and-fill method; see Duval and Tweedie, 2000), \code{"n"} (the regressoin test with sample sizes as the predictor; see Macaskill et al., 2001), \code{"inv.n"} (the regressoin test with the inverse of sample sizes as the predictor; see Peters et al., 2006), \code{"as.rank"} (the rank test based on the arcsine-transformed effect sizes; see Rucker et al., 2008), \code{"as.reg"} (the regression test based on the arcsine-transformed effect sizes under the fixed-effect setting), \code{"as.reg.het"} (the regression test based on the arcsine-transformed effect sizes accounting for additive heterogeneity), \code{"smoothed"} (the regression test based on the smoothed sample variances under the fixed-effect setting; see Jin et al., 2014), \code{"smoothed.het"} (the regression test based on the smoothed sample variances accounting for additive heterogeneity), \code{"score"} (the regression test based on the score function; see Harbord et al., 2006), and \code{"count"} (the test based on the hypergeometric distributions of event counts, designed for sparse data; see Schwarzer et al., 2007). The default is to include all aforementioned tests.
+  a vector of character strings specifying the publication bias tests to be included in the hybrid test. They can be a subset of \code{"rank"} (Begg's rank test; see Begg and Mazumdar, 1994), \code{"reg"} (Egger's regression test under the fixed-effect setting; see Egger et al., 1997), \code{"reg.het"} (Egger's regression test accounting for additive heterogeneity), \code{"skew"} (the skewness-based test under the fixed-effect setting; see Lin and Chu, 2018), \code{"skew.het"} (the skewness-based test accounting for additive heterogeneity), \code{"inv.sqrt.n"} (the regression test based on sample sizes; see Tang and Liu, 2000), \code{"trimfill"} (the trim-and-fill method; see Duval and Tweedie, 2000), \code{"n"} (the regressoin test with sample sizes as the predictor; see Macaskill et al., 2001), \code{"inv.n"} (the regressoin test with the inverse of sample sizes as the predictor; see Peters et al., 2006), \code{"as.rank"} (the rank test based on the arcsine-transformed effect sizes; see Rucker et al., 2008), \code{"as.reg"} (the regression test based on the arcsine-transformed effect sizes under the fixed-effect setting), \code{"as.reg.het"} (the regression test based on the arcsine-transformed effect sizes accounting for additive heterogeneity), \code{"smoothed"} (the regression test based on the smoothed sample variances under the fixed-effect setting; see Jin et al., 2014), \code{"smoothed.het"} (the regression test based on the smoothed sample variances accounting for additive heterogeneity), \code{"score"} (the regression test based on the score function; see Harbord et al., 2006), and \code{"count"} (the test based on the hypergeometric distributions of event counts, designed for sparse data; see Schwarzer et al., 2007). The default is to include all aforementioned tests.
 }
   \item{iter.resam}{
-  a positive integer indicating the number of resampling iterations for calculating the p-value of the hybrid test.
+  a positive integer specifying the number of resampling iterations for calculating the p-value of the hybrid test.
 }
   \item{theo.pval}{
   a logical value indicating whether additionally calculating the p-values of the tests specified in \code{methods} based on the test statistics' theoretical null distributions. Regardless of this argument, the resampling-based p-values are always produced by this function for the tests specified in \code{methods}.
@@ -55,7 +55,7 @@ Harbord RM, Egger M, Sterne JAC (2006). "A modified test for small-study effects
 
 Jin Z-C, Wu C, Zhou X-H, He J (2014). "A modified regression method to test publication bias in meta-analyses with binary outcomes." \emph{BMC Medical Research Methodology}, \bold{14}, 132. <\doi{10.1186/1471-2288-14-132}>
 
-Lin L (2020). "Hybrid test for publication bias in meta-analysis." \emph{Statistical Methods in Medical Research}, in press. <\doi{10.1177/0962280220910172}>
+Lin L (2020). "Hybrid test for publication bias in meta-analysis." \emph{Statistical Methods in Medical Research}, \bold{29}(10), 2881--2899. <\doi{10.1177/0962280220910172}>
 
 Lin L, Chu H (2018). "Quantifying publication bias in meta-analysis." \emph{Biometrics}, \bold{74}(3), 785--794. <\doi{10.1111/biom.12817}>
 
@@ -94,4 +94,4 @@ out.whiting
 # increases the number of resampling iterations to 10000,
 #  taking longer time
 }
-\keyword{publication bias}
+\keyword{publication bias/small-study effects}

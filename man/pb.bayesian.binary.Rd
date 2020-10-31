@@ -2,10 +2,10 @@
 \alias{pb.bayesian.binary}
 
 \title{
-Bayesian Method for Assessing Publication Bias in Meta-Analysis of a Binary Outcome
+Bayesian Method for Assessing Publication Bias/Small-Study Effects in Meta-Analysis of a Binary Outcome
 }
 \description{
-Performs multiple methods introduced in Shi et al.\sspace(2020) to assess publication bias under the Bayesian framework in a meta-analysis of (log) odds ratios.
+Performs multiple methods introduced in Shi et al.\sspace(2020) to assess publication bias/small-study effects under the Bayesian framework in a meta-analysis of (log) odds ratios.
 }
 \usage{
 pb.bayesian.binary(n00, n01, n10, n11, p01 = NULL, p11 = NULL, data,
@@ -18,28 +18,28 @@ pb.bayesian.binary(n00, n01, n10, n11, p01 = NULL, p11 = NULL, data,
 
 \arguments{
   \item{n00}{
-  a numeric vector or the corresponding column name in the argument \code{data}, indicating the counts of non-events in treatment group 0 in the collected studies.
+  a numeric vector or the corresponding column name in the argument \code{data}, specifying the counts of non-events in treatment group 0 in the collected studies.
   }
   \item{n01}{
-  a numeric vector or the corresponding column name in the argument \code{data}, indicating the counts of events in treatment group 0 in the collected studies.
+  a numeric vector or the corresponding column name in the argument \code{data}, specifying the counts of events in treatment group 0 in the collected studies.
   }
   \item{n10}{
-  a numeric vector or the corresponding column name in the argument \code{data}, indicating the counts of non-events in treatment group 1 in the collected studies.
+  a numeric vector or the corresponding column name in the argument \code{data}, specifying the counts of non-events in treatment group 1 in the collected studies.
   }
   \item{n11}{
-  a numeric vector or the corresponding column name in the argument \code{data}, indicating the counts of events in treatment group 1 in the collected studies. 
+  a numeric vector or the corresponding column name in the argument \code{data}, specifying the counts of events in treatment group 1 in the collected studies. 
   }
   \item{p01}{
-  an optional numeric vector indicating true event rates (e.g., from simulations) in the treatment group 0 across studies.
+  an optional numeric vector specifying true event rates (e.g., from simulations) in the treatment group 0 across studies.
   }
   \item{p11}{
-  an optional numeric vector indicating true event rates (e.g., from simulations) in the treatment group 1 across studies.
+  an optional numeric vector specifying true event rates (e.g., from simulations) in the treatment group 1 across studies.
   }
   \item{data}{
   an optional data frame containing the meta-analysis dataset. If \code{data} is specified, the previous arguments, \code{n00}, \code{n01}, \code{n10}, \code{n11}, \code{p01} (if any), and \code{p11} (if any) should be specified as their corresponding column names in \code{data}.
   }
   \item{sig.level}{
-  a numeric value indicating the statistical significance level \eqn{\alpha} for testing for publication bias. The default is 0.1. It corresponds to \eqn{(1 - \alpha) \times 100\%} confidence/credible intervals.
+  a numeric value specifying the statistical significance level \eqn{\alpha} for testing for publication bias. The default is 0.1. It corresponds to \eqn{(1 - \alpha) \times 100\%} confidence/credible intervals.
   }
   \item{method}{
   a character string specifying the method for assessing publication bias via Bayesian hierarchical models. It can be one of \code{"bay"} (the Bayesian approach proposed in Shi et al., 2020), \code{"reg.bay"} (Egger's regression test, see Egger et al., 1997, under the Bayesian framework) and \code{"smoothed.bay"} (the regression test based on the smoothed sample variance, see Jin et al., 2014, under the Bayesian framework), where all regression tests are under the random-effects setting. The default is \code{"bay"}. 
@@ -63,7 +63,7 @@ pb.bayesian.binary(n00, n01, n10, n11, p01 = NULL, p11 = NULL, data,
   the total number of iterations in each MCMC chain after the burn-in period. The default is 10,000.
   }
   \item{thin}{
-  a positive integer indicating thinning rate. The default is 2.
+  a positive integer specifying thinning rate. The default is 2.
   }
   \item{upp.het}{
   a positive number for specifying the upper bound of uniform priors for standard deviation parameters (if \code{sd.prior} = \code{"unif"}). The default is 2.
@@ -133,4 +133,4 @@ rslt.henry <- pb.bayesian.binary(n00, n01, n10, n11, data = dat.henry,
 rslt.henry
 }
 }
-\keyword{publication bias}
+\keyword{publication bias/small-study effects}

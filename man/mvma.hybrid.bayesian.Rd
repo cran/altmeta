@@ -33,10 +33,10 @@ mvma.hybrid.bayesian(ys, vars, n.adapt = 1000, n.chains = 3,
   the total number of iterations in each MCMC chain after the burn-in period. The default is 10,000.
 }
   \item{n.thin}{
-  a positive integer indicating thinning rate. The default is 1.
+  a positive integer specifying thinning rate. The default is 1.
 }
   \item{data.name}{
-  a character string indicating the data name. This is used in the names of the generated files that contain results. The default is \code{NULL}.
+  a character string specifying the data name. This is used in the names of the generated files that contain results. The default is \code{NULL}.
 }
   \item{traceplot}{
   a logical value indicating whether to save trace plots for the overall effect sizes and between-study standard deviations. The default is \code{FALSE}.
@@ -50,7 +50,7 @@ Suppose \eqn{n} studies are collected in a multivariate meta-analysis on a total
 \deqn{\boldsymbol{y}_i \sim N (\boldsymbol{\mu}, (\mathbf{D}_i + \mathbf{T})^{1/2} \mathbf{R} (\mathbf{D}_i + \mathbf{T})^{1/2}),}
 where \eqn{\boldsymbol{\mu}} represents the overall effect sizes across studies, \eqn{\mathbf{T} = diag(\tau_1^2, \ldots, \tau_p^2)} consists of the between-study variances, and \eqn{\mathbf{R}} is the marginal correlation matrix. Although the within-study correlations are unknown, this model accounts for both within- and between-study correlations by using the marginal correlation matrix.
 
-Uniform priors \eqn{U (0, 10)} are specified for the between-study standard deviations \eqn{\tau_j} (\eqn{j = 1, \ldots, p}). The correlation matrix can be written as \eqn{\mathbf{R} = \mathbf{L} \mathbf{L}^T}, where \eqn{\mathbf{L} = (L_{ij})} is a lower triangular matrix with nonnegative diagonal elements. Also, \eqn{L_{11} = 1} and for \eqn{i = 2, \ldots, p}, \eqn{L_{ij} = \cos \theta_{i2}} if \eqn{j = 1}; \eqn{L_{ij} = (\prod_{k = 2}^{j} \sin \theta_{ik}) \cos \theta_{i, j + 1}} if \eqn{j = 2, \ldots, i - 1}; and \eqn{L_{ij} = \prod_{k = 2}^{i} \sin \theta_{ik}} if \eqn{j = i} (Lu and Ades, 2009; Wei and Higgins, 2013). Here, \eqn{\theta_{ij}}'s are angle parameters for \eqn{2 \leq j \leq i \leq p}, and \eqn{\theta_{ij} \in (0, \pi)}. Uniform priors are specified for the angle parameters: \eqn{\theta_{ij} \sim U (0, \pi)}.
+Uniform priors \eqn{U (0, 10)} are specified for the between-study standard deviations \eqn{\tau_j} (\eqn{j = 1, \ldots, p}). The correlation matrix can be written as \eqn{\mathbf{R} = \mathbf{L} \mathbf{L}^\prime}, where \eqn{\mathbf{L} = (L_{ij})} is a lower triangular matrix with nonnegative diagonal elements. Also, \eqn{L_{11} = 1} and for \eqn{i = 2, \ldots, p}, \eqn{L_{ij} = \cos \theta_{i2}} if \eqn{j = 1}; \eqn{L_{ij} = (\prod_{k = 2}^{j} \sin \theta_{ik}) \cos \theta_{i, j + 1}} if \eqn{j = 2, \ldots, i - 1}; and \eqn{L_{ij} = \prod_{k = 2}^{i} \sin \theta_{ik}} if \eqn{j = i} (Lu and Ades, 2009; Wei and Higgins, 2013). Here, \eqn{\theta_{ij}}'s are angle parameters for \eqn{2 \leq j \leq i \leq p}, and \eqn{\theta_{ij} \in (0, \pi)}. Uniform priors are specified for the angle parameters: \eqn{\theta_{ij} \sim U (0, \pi)}.
 }
 \value{
 This functions produces posterior estimates and Gelman and Rubin's potential scale reduction factor, and it generates several files that contain trace plots (if \code{traceplot} = \code{TRUE}), and MCMC posterior samples (if \code{coda} = \code{TRUE}) in users' working directory. In these results, \code{mu} represents the overall effect sizes, \code{tau} represents the between-study variances, \code{R} contains the elements of the correlation matrix, and \code{theta} represents the angle parameters (see "Details").

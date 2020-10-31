@@ -1,13 +1,15 @@
+S3method(plot, meta.dt)
 S3method(plot, metaoutliers)
-export(maprop.glmm, maprop.twostep, metahet, metaoutliers, metapb, mvma, mvma.bayesian, mvma.hybrid, mvma.hybrid.bayesian, pb.bayesian.binary, pb.hybrid.binary, pb.hybrid.generic, ssfunnel)
+S3method(print, meta.dt)
 
-import("rjags")
+export(maprop.glmm, maprop.twostep, meta.biv, meta.dt, metahet, metaoutliers, metapb, mvma, mvma.bayesian, mvma.hybrid, mvma.hybrid.bayesian, pb.bayesian.binary, pb.hybrid.binary, pb.hybrid.generic, ssfunnel)
+
+import("graphics", "rjags", "stats")
+
 importFrom("coda", "gelman.diag")
-importFrom("graphics", "abline", "axis", "curve", "legend", "par", "plot", "points", "plot.default")
 importFrom("grDevices", "png", "dev.off")
 importFrom("lme4", "glmer")
 importFrom("Matrix", "rankMatrix")
-importFrom("metafor", "rma")
+importFrom("metafor", "rma", "rma.mv")
 importFrom("methods", "is")
-importFrom("stats", "binomial", "cor.test", "optim", "pcauchy", "pchisq", "plogis", "pnorm", "qnorm", "quantile", "rnorm", "runif", "uniroot", "update", "lm", "summary.lm", "qt", "var")
 importFrom("utils", "write.table")

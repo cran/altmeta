@@ -13,13 +13,13 @@ metahet(y, s2, n.resam = 1000)
 
 \arguments{
   \item{y}{
-  a numeric vector indicating the observed effect sizes in the collected studies; they are assumed to be normally distributed.
+  a numeric vector specifying the observed effect sizes in the collected studies; they are assumed to be normally distributed.
 }
   \item{s2}{
-  a numeric vector indicating the within-study variances.
+  a numeric vector specifying the within-study variances.
 }
   \item{n.resam}{
-  a positive integer indicating the number of resampling iterations for calculating p-values of test statistics and 95\% confidence interval of heterogeneity measures.
+  a positive integer specifying the number of resampling iterations for calculating p-values of test statistics and 95\% confidence interval of heterogeneity measures.
 }
 }
 \details{

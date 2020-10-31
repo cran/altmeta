@@ -19,10 +19,10 @@ mvma(ys, covs, method = "reml", tol = 1e-10)
   a numeric list with length n. Each element is the p x p within-study covariance matrix. \code{NA} is allowed for missing endpoints in the covariance matrix.
 }
   \item{method}{
-  a character string indicating the method for estimating the overall effect sizes. It should be \code{"fe"} (fixed-effects model), \code{"ml"} (random-effects model using the maximum likelihood method), or \code{"reml"} (random-effects model using the restricted maximum likelihood method, the default).
+  a character string specifying the method for estimating the overall effect sizes. It should be \code{"fe"} (fixed-effects model), \code{"ml"} (random-effects model using the maximum likelihood method), or \code{"reml"} (random-effects model using the restricted maximum likelihood method, the default).
 }
   \item{tol}{
-  a small number indicating the convergence tolerance for the estimates by maximizing (restricted) likelihood. The default is \code{1e-10}.
+  a small number specifying the convergence tolerance for the estimates by maximizing (restricted) likelihood. The default is \code{1e-10}.
 }
 }
 \details{

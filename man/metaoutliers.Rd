@@ -13,10 +13,10 @@ metaoutliers(y, s2, model)
 
 \arguments{
   \item{y}{
-  a numeric vector indicating the observed effect sizes in the collected studies; they are assumed to be normally distributed.
+  a numeric vector specifying the observed effect sizes in the collected studies; they are assumed to be normally distributed.
 }
   \item{s2}{
-  a numeric vector indicating the within-study variances.
+  a numeric vector specifying the within-study variances.
 }
   \item{model}{
   a character string specified as either \code{"FE"} or \code{"RE"}. If \code{model} = \code{"FE"}, this function uses the outlier detection procedure for the fixed-effect meta-analysis desribed in Chapter 12 in Hedges and Olkin (1985); If \code{model} = \code{"RE"}, the procedure for the random-effects meta-analysis desribed in Viechtbauer and Cheung (2010) is used. See Details for the two approaches. If the argument \code{model} is not specified, this function sets \code{model} = \code{"FE"} if \eqn{I_r^2 < 30\%} and sets \code{model} = \code{"RE"} if \eqn{I_r^2 \geq 30\%}.

@@ -1,6 +1,6 @@
 maprop.glmm <- function(e, n, data, link = "logit",
   alpha = 0.05, pop.avg = TRUE, int.approx = 10000, b.iter = 1000,
-  seed = 1234){
+  seed = 1234, ...){
   if(missing(e)) stop("need to specify event counts.")
   if(missing(n)) stop("need to specify sample sizes.")
   if(!missing(data)){
@@ -15,7 +15,7 @@ maprop.glmm <- function(e, n, data, link = "logit",
   N <- length(e)
   data <- data.frame(sid = 1:N, e = e, n = n)
   rslt <- glmer(cbind(e, n - e) ~ 1 + (1 | sid),
-    data = data, family = binomial(link = link))
+    data = data, family = binomial(link = link), ...)
   mu.est <- summary(rslt)$coefficients[1]
   mu.se <- summary(rslt)$coefficients[2]
   mu.ci <- c(mu.est - qnorm(1 - alpha/2) * mu.se,
@@ -59,7 +59,7 @@ maprop.glmm <- function(e, n, data, link = "logit",
       data.temp$sid <- 1:N
       suppressMessages(out.W.E <- tryCatch.W.E(
         rslt.temp <- glmer(cbind(e, n - e) ~ 1 + (1 | sid),
-          data = data.temp, family = binomial(link = link))))
+          data = data.temp, family = binomial(link = link), ...)))
       if(is.null(out.W.E$warning) & !inherits(out.W.E$value, "error")){
         b.idx <- b.idx + 1
         mu.est.b[b.idx] <- summary(rslt.temp)$coefficients[1]

@@ -2,10 +2,10 @@
 \alias{metapb}
 
 \title{
-Detecting and Quantifying Publication Bias
+Detecting and Quantifying Publication Bias/Small-Study Effects
 }
 \description{
-Performs the regression test and calculates skewness for detecting and quantifying publication bias.
+Performs the regression test and calculates skewness for detecting and quantifying publication bias/small-study effects.
 }
 \usage{
 metapb(y, s2, model)
@@ -13,10 +13,10 @@ metapb(y, s2, model)
 
 \arguments{
   \item{y}{
-  a numeric vector indicating the observed effect sizes in the collected studies; they are assumed to be normally distributed.
+  a numeric vector specifying the observed effect sizes in the collected studies; they are assumed to be normally distributed.
 }
   \item{s2}{
-  a numeric vector indicating the within-study variances.
+  a numeric vector specifying the within-study variances.
 }
   \item{model}{
   a characher string specifying the fixed-effect (\code{"FE"}) or random-effects (\code{"RE"}) model. If not specified, this function uses the \eqn{Q} statistic to test for heterogeneity: if the p-value is smaller than 0.05, \code{model} is set to \code{"RE"}; otherwise, \code{model} = \code{"FE"}.
@@ -67,4 +67,4 @@ attach(dat.lcj)
 metapb(y, s2)
 detach(dat.lcj)
 }
-\keyword{publication bias}
+\keyword{publication bias/small-study effects}

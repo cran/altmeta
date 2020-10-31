@@ -2,10 +2,10 @@
 \alias{pb.hybrid.generic}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-Hybrid Test for Publication Bias in Meta-Analysis With Generic Outcomes
+Hybrid Test for Publication Bias/Small-Study Effects in Meta-Analysis With Generic Outcomes
 }
 \description{
-Performs the hybrid test for publication bias introduced in Lin (2020), which synthesizes results from multiple popular publication bias tests, in a meta-analysis with generic outcomes.
+Performs the hybrid test for publication bias/small-study effects introduced in Lin (2020), which synthesizes results from multiple popular publication bias tests, in a meta-analysis with generic outcomes.
 }
 \usage{
 pb.hybrid.generic(y, s2, n, data, methods,
@@ -14,22 +14,22 @@ pb.hybrid.generic(y, s2, n, data, methods,
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{y}{
-  a numeric vector or the corresponding column name in the argument \code{data}, indicating the observed effect sizes in the collected studies.
+  a numeric vector or the corresponding column name in the argument \code{data}, specifying the observed effect sizes in the collected studies.
 }
   \item{s2}{
-  a numeric vector or the corresponding column name in the argument \code{data}, indicating the within-study variances.
+  a numeric vector or the corresponding column name in the argument \code{data}, specifying the within-study variances.
 }
   \item{n}{
-  an optional numeric vector or the corresponding column name in the argument \code{data}, indicating the study-specific total sample sizes. This argument is required if the sample-size-based test (\code{"inv.sqrt.n"}) is included in \code{method}.
+  an optional numeric vector or the corresponding column name in the argument \code{data}, specifying the study-specific total sample sizes. This argument is required if the sample-size-based test (\code{"inv.sqrt.n"}) is included in \code{method}.
 }
   \item{data}{
   an optional data frame containing the meta-analysis dataset. If \code{data} is specified, the previous arguments, \code{y}, \code{s2}, and \code{n}, should be specified as their corresponding column names in \code{data}.
 }
   \item{methods}{
-  a vector of character strings indicating the publication bias tests to be included in the hybrid test. They can be a subset of \code{"rank"} (Begg's rank test; see Begg and Mazumdar, 1994), \code{"reg"} (Egger's regression test under the fixed-effect setting; see Egger et al., 1997), \code{"reg.het"} (Egger's regression test accounting for additive heterogeneity), \code{"skew"} (the skewness-based test under the fixed-effect setting; see Lin and Chu, 2018), \code{"skew.het"} (the skewness-based test accounting for additive heterogeneity), \code{"inv.sqrt.n"} (the regression test based on sample sizes; see Tang and Liu, 2000), and \code{"trimfill"} (the trim-and-fill method; see Duval and Tweedie, 2000). The default is to include all aforementioned tests.
+  a vector of character strings specifying the publication bias tests to be included in the hybrid test. They can be a subset of \code{"rank"} (Begg's rank test; see Begg and Mazumdar, 1994), \code{"reg"} (Egger's regression test under the fixed-effect setting; see Egger et al., 1997), \code{"reg.het"} (Egger's regression test accounting for additive heterogeneity), \code{"skew"} (the skewness-based test under the fixed-effect setting; see Lin and Chu, 2018), \code{"skew.het"} (the skewness-based test accounting for additive heterogeneity), \code{"inv.sqrt.n"} (the regression test based on sample sizes; see Tang and Liu, 2000), and \code{"trimfill"} (the trim-and-fill method; see Duval and Tweedie, 2000). The default is to include all aforementioned tests.
 }
   \item{iter.resam}{
-  a positive integer indicating the number of resampling iterations for calculating the p-value of the hybrid test.
+  a positive integer specifying the number of resampling iterations for calculating the p-value of the hybrid test.
 }
   \item{theo.pval}{
   a logical value indicating whether additionally calculating the p-values of the tests specified in \code{methods} based on the test statistics' theoretical null distributions. Regardless of this argument, the resampling-based p-values are always produced by this function for the tests specified in \code{methods}.
@@ -48,7 +48,7 @@ Duval S, Tweedie R (2000). "A nonparametric `trim and fill' method of accounting
 
 Egger M, Davey Smith G, Schneider M, Minder C (1997). "Bias in meta-analysis detected by a simple, graphical test." \emph{BMJ}, \bold{315}(7109), 629--634. <\doi{10.1136/bmj.315.7109.629}>
 
-Lin L (2020). "Hybrid test for publication bias in meta-analysis." \emph{Statistical Methods in Medical Research}, in press. <\doi{10.1177/0962280220910172}>
+Lin L (2020). "Hybrid test for publication bias in meta-analysis." \emph{Statistical Methods in Medical Research}, \bold{29}(10), 2881--2899. <\doi{10.1177/0962280220910172}>
 
 Lin L, Chu H (2018). "Quantifying publication bias in meta-analysis." \emph{Biometrics}, \bold{74}(3), 785--794. <\doi{10.1111/biom.12817}>
 
@@ -93,4 +93,4 @@ out.paige
 # increases the number of resampling iterations to 10000,
 #  taking longer time
 }
-\keyword{publication bias}
+\keyword{publication bias/small-study effects}

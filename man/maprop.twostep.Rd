@@ -14,10 +14,10 @@ maprop.twostep(e, n, data, link = "logit", method = "ML", alpha = 0.05,
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{e}{
-  a numeric vector indicating the event counts in the collected studies.
+  a numeric vector specifying the event counts in the collected studies.
 }
   \item{n}{
-  a numeric vector indicating the sample sizes in the collected studies.
+  a numeric vector specifying the sample sizes in the collected studies.
 }
   \item{data}{
   an optional data frame containing the meta-analysis dataset. If \code{data} is specified, the previous arguments, \code{e} and \code{n}, should be specified as their corresponding column names in \code{data}.
@@ -29,16 +29,16 @@ maprop.twostep(e, n, data, link = "logit", method = "ML", alpha = 0.05,
   a character string specifying the method to perform the meta-analysis, which is passed to the argument \code{method} in the function \code{\link[metafor]{rma.uni}} in the package \pkg{metafor}. It can be one of \code{"ML"} (maximum likelihood, the default), \code{"REML"} (restricted maximum likelihood), and many other options; see more details in the manual of \pkg{metafor}. The default is set to \code{"ML"} for consistency with the function \code{\link{maprop.glmm}}, where generalized linear mixed models are often estimated via the maximum likelihood approach. For the two-step method, users might also use \code{"REML"} because the restricted maximum likelihood estimation may have superior performance in many cases.
 }
   \item{alpha}{
-  a numeric value indicating the statistical significance level.
+  a numeric value specifying the statistical significance level.
 }
   \item{pop.avg}{
   a logical value indicating whether the population-averaged proportion and its confidence interval are to be produced. This quantity is the marginal mean of study-specific proportions, while the commonly-reported overall proportion usually represents the median (or interpreted as a conditional measure); see more details about this quantity in Section 13.2.3 in Agresti (2013), Chu et al.{\sspace}(2012), Lin and Chu (2020), and Zeger et al.{\sspace}(1988). If \code{pop.avg} = \code{TRUE} (the default), the bootstrap resampling is used to produce the confidence interval of the population-averaged proportion; the confidence interval of the commonly-reported median proportion will be also produced, in addition to its conventional confidence interval (by back-transforming the Wald-type confidence interval derived on the scale specified by \code{link}).
 }
   \item{int.approx}{
-  an integer indicating the number of independent standard normal samples for numerically approximating the integration involved in the calculation of the population-averaged proportion; see details in Lin and Chu (2020). It is only used when \code{pop.avg} = \code{TRUE}. For the commonly-used data transformations available for \code{link}, the population-averaged proportion does not have a closed form.
+  an integer specifying the number of independent standard normal samples for numerically approximating the integration involved in the calculation of the population-averaged proportion; see details in Lin and Chu (2020). It is only used when \code{pop.avg} = \code{TRUE}. For the commonly-used data transformations available for \code{link}, the population-averaged proportion does not have a closed form.
 }
   \item{b.iter}{
-  an integer indicating the number of bootstrap iterations; it is only used when \code{pop.avg} = \code{TRUE}.
+  an integer specifying the number of bootstrap iterations; it is only used when \code{pop.avg} = \code{TRUE}.
 }
   \item{seed}{
   an integer for specifying the seed of the random number generation for reproducibility during the bootstrap resampling (and numerical approximation for the population-averaged proportion); it is only used when \code{pop.avg} = \code{TRUE}.
@@ -57,7 +57,7 @@ Barendregt JJ, Doi SA, Lee YY, Norman RE, Vos T (2013). "Meta-analysis of preval
 
 Freeman MF, Tukey JW (1950). "Transformations related to the angular and the square root." \emph{The Annals of Mathematical Statistics}, \bold{21}(4), 607--611. <\doi{10.1214/aoms/1177729756}>
 
-Lin L, Chu H (2020). "Meta-analysis of proportions using generalized linear mixed models." \emph{Epidemiology}, in press. <\doi{10.1097/ede.0000000000001232}>
+Lin L, Chu H (2020). "Meta-analysis of proportions using generalized linear mixed models." \emph{Epidemiology}, \bold{31}(5), 713--717. <\doi{10.1097/ede.0000000000001232}>
 
 Miller JJ (1978). "The inverse of the Freeman--Tukey double arcsine transformation." \emph{The American Statistician}, \bold{32}(4), 138. <\doi{10.1080/00031305.1978.10479283}>
 
