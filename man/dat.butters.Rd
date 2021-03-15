@@ -23,4 +23,4 @@ This dataset serves as an example of meta-analysis of (log) odds ratios.
 \source{
 Butters DJ, Ghersi D, Wilcken N, Kirk SJ, Mallon PT (2010). "Addition of drug/s to a chemotherapy regimen for metastatic breast cancer." \emph{Cochrane Database of Systematic Reviews}, \bold{11}, Art.{\sspace}No.: CD003368. <\doi{10.1002/14651858.CD003368.pub3}>
 }
-\keyword{datasets}
+\keyword{dataset}

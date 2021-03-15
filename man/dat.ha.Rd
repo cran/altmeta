@@ -18,4 +18,4 @@ This meta-analysis serves as an example to illustrate function usage in the pack
 \source{
 Hrobjartsson A, Gotzsche PC (2010). "Placebo interventions for all clinical conditions." \emph{Cochrane Database of Systematic Reviews}, \bold{1}. Art.{\sspace}No.: CD003974. <\doi{10.1002/14651858.CD003974.pub3}>
 }
-\keyword{datasets}
+\keyword{dataset}

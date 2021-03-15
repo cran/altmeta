@@ -18,4 +18,4 @@ This meta-analysis serves as an example to illustrate function usage in the pack
 \source{
 Haentjens P, Magaziner J, Colon-Emeric CS, Vanderschueren D, Milisen K, Velkeniers B, Boonen S (2010). "Meta-analysis: excess mortality after hip fracture among older women and men". \emph{Annals of Internal Medicine}, \bold{152}(6), 380--390. <\doi{10.7326/0003-4819-152-6-201003160-00008}>
 }
-\keyword{datasets}
+\keyword{dataset}

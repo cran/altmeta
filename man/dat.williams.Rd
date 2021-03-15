@@ -23,4 +23,4 @@ This dataset serves as an example of meta-analysis of (log) relative risks.
 \source{
 Williams T, Hattingh CJ, Kariuki CM, Tromp SA, van Balkom AJ, Ipser JC, Stein DJ (2017). "Pharmacotherapy for social anxiety disorder (SAnD)." \emph{Cochrane Database of Systematic Reviews}, \bold{10}, Art.{\sspace}No.: CD001206. <\doi{10.1002/14651858.CD001206.pub3}>
 }
-\keyword{datasets}
+\keyword{dataset}

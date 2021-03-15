@@ -23,4 +23,4 @@ This dataset serves as an example of meta-analysis of risk differences.
 \source{
 Kaner EF, Dickinson HO, Beyer FR, Campbell F, Schlesinger C, Heather N, Saunders JB, Burnand B, Pienaar ED (2007). "Effectiveness of brief alcohol interventions in primary care populations." \emph{Cochrane Database of Systematic Reviews}, \bold{2}, Art.{\sspace}No.: CD004148. <\doi{10.1002/14651858.CD004148.pub3}>
 }
-\keyword{datasets}
+\keyword{dataset}

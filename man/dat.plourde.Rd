@@ -21,4 +21,4 @@ This dataset serves as an example of meta-analysis of mean differences.
 \source{
 Plourde G, Pancholy SB, Nolan J, Jolly S, Rao SV, Amhed I, Bangalore S, Patel T, Dahm JB, Bertrand OF (2015). "Radiation exposure in relation to the arterial access site used for diagnostic coronary angiography and percutaneous coronary intervention: a systematic review and meta-analysis." \emph{Lancet}, \bold{386}(10009), 2192--2203. <\doi{10.1016/S0140-6736(15)00305-0}>
 }
-\keyword{datasets}
+\keyword{dataset}

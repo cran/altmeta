@@ -21,4 +21,4 @@ This dataset serves as an example of meta-analysis of standardized mean differen
 \source{
 Barlow J, Smailagic N, Huband N, Roloff V, Bennett C (2014). "Group-based parent training programmes for improving parental psychosocial health." \emph{Cochrane Database of Systematic Reviews}, \bold{5}, Art.{\sspace}No.: CD002020. <\doi{10.1002/14651858.CD002020.pub4}>
 }
-\keyword{datasets}
+\keyword{dataset}

@@ -21,4 +21,4 @@ This meta-analysis serves as an example of meta-analysis with binary outcomes.
 \source{
 Ducharme FM, Ni Chroinin M, Greenstone I, Lasserson TJ (2010). "Addition of long-acting beta2-agonists to inhaled corticosteroids versus same dose inhaled corticosteroids for chronic asthma in adults and children." \emph{Cochrane Database of Systematic Reviews}, \bold{5}, Art.{\sspace}No.: CD005535. <\doi{10.1002/14651858.CD005535.pub2}>
 }
-\keyword{datasets}
+\keyword{dataset}

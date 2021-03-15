@@ -21,4 +21,4 @@ This meta-analysis serves as an example of meta-analyses of diagnostic tests.
 \source{
 Scheidler J, Hricak H, Yu KK, Subak L, Segal MR (1997). "Radiological evaluation of lymph node metastases in patients with cervical cancer: a meta-analysis." \emph{JAMA}, \bold{278}(13), 1096--1101. <\doi{10.1001/jama.1997.03550130070040}>
 }
-\keyword{datasets}
+\keyword{dataset}

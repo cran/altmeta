@@ -21,4 +21,4 @@ This dataset serves as an example of meta-analysis of mean differences.
 \source{
 Annane D, Bellissant E, Bollaert PE, Briegel J, Keh D, Kupfer Y (2015). "Corticosteroids for treating sepsis." \emph{Cochrane Database of Systematic Reviews}, \bold{12}, Art.{\sspace}No.: CD002243. <\doi{10.1002/14651858.CD002243.pub3}>
 }
-\keyword{datasets}
+\keyword{dataset}

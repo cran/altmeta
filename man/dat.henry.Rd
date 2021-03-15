@@ -21,4 +21,4 @@ This meta-analysis serves as an example of meta-analysis with binary outcomes.
 \source{
 Henry DA, Carless PA, Moxey AJ, O'Connell, Stokes BJ, Fergusson DA, Ker K (2011). "Anti-fibrinolytic use for minimising perioperative allogeneic blood transfusion." \emph{Cochrane Database of Systematic Reviews}, \bold{1}, Art.{\sspace}No.: CD001886. <\doi{10.1002/14651858.CD001886.pub3}>
 }
-\keyword{datasets}
+\keyword{dataset}

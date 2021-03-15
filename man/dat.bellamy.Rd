@@ -20,4 +20,4 @@ This meta-analysis serves as an example of meta-analysis with binary outcomes.
 \source{
 Bellamy L, Casas JP, Hingorani AD, Williams D (2009). "Type 2 diabetes mellitus after gestational diabetes: a systematic review and meta-analysis." \emph{Lancet}, \bold{373}(9677), 1773--1779. <\doi{10.1016/S0140-6736(09)60731-5}>
 }
-\keyword{datasets}
+\keyword{dataset}

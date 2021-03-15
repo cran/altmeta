@@ -25,4 +25,4 @@ This dataset serves as an example of meta-analysis of (log) odds ratios.
 \source{
 Whiting PF, Wolff RF, Deshpande S, Di Nisio M, Duffy S, Hernandez AV, Keurentjes JC, Lang S, Misso K, Ryder S, Schmidlkofer S, Westwood M, Kleijnen J (2015). "Cannabinoids for medical use: a systematic review and meta-analysis." \emph{JAMA}, \bold{313}(24), 2456--2473. <\doi{10.1001/jama.2015.6358}>
 }
-\keyword{datasets}
+\keyword{dataset}

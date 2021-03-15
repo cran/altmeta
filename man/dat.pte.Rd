@@ -18,4 +18,4 @@ This dataset serves as an example to illustrate network meta-analysis of multipl
 \source{
 Serghiou S, Patel CJ, Tan YY, Koay P, Ioannidis JPA (2016). "Field-wide meta-analyses of observational associations can map selective availability of risk factors and the impact of model specifications." \emph{Journal of Clinical Epidemiology}, \bold{71}, 58--67. <\doi{10.1016/j.jclinepi.2015.09.004}>
 }
-\keyword{datasets}
+\keyword{dataset}

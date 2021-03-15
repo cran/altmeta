@@ -21,4 +21,4 @@ This dataset serves as an example of meta-analysis of standardized mean differen
 \source{
 Paige NM, Miake-Lye IM, Booth MS, Beroes JM, Mardian AS, Dougherty P, Branson R, Tang B, Morton SC, Shekelle PG (2017). "Association of spinal manipulative therapy with clinical benefit and harm for acute low back pain: systematic review and meta-analysis." \emph{JAMA}, \bold{317}(14), 1451--1460. <\doi{10.1001/jama.2017.3086}>
 }
-\keyword{datasets}
+\keyword{dataset}

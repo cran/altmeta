@@ -1,13 +1,14 @@
 Package: altmeta
 Type: Package
 Title: Alternative Meta-Analysis Methods
-Version: 3.2
-Date: 2020-08-30
+Version: 3.3
+Date: 2021-03-14
 Authors@R: 
   c(person(given = "Lifeng", family = "Lin",
     role = c("aut", "cre"), email = "linl@stat.fsu.edu",
     comment = c(ORCID = "0000-0002-3562-9816")),
     person(given = "Linyu", family = "Shi", role = c("ctb")),
+    person(given = "Kristine J.", family = "Rosenberger", role = c("ctb")),
     person(given = "Haitao", family = "Chu",
     role = c("aut"), email = "chux0051@umn.edu",
     comment = c(ORCID = "0000-0003-0932-598X")))
@@ -30,12 +31,15 @@ Description: Provides alternative statistical methods for meta-analysis, includi
  - meta-analysis methods for synthesizing proportions
    (Lin and Chu, 2020 <doi:10.1097/ede.0000000000001232>);
  - models for multivariate meta-analysis
-   (Lin and Chu, 2018 <doi:10.1002/jrsm.1293>).
+   (Lin and Chu, 2018 <doi:10.1002/jrsm.1293>);
+ - measures of inconsistency degrees of freedom in Bayesian network meta-analysis
+   (Lin, 2020 <doi:10.1080/10543406.2020.1852247>).
 License: GPL (>= 2)
 NeedsCompilation: no
-Packaged: 2020-08-31 02:02:19 UTC; Lifeng Lin
+Packaged: 2021-03-14 19:00:30 UTC; Lifeng Lin
 Author: Lifeng Lin [aut, cre] (<https://orcid.org/0000-0002-3562-9816>),
   Linyu Shi [ctb],
+  Kristine J. Rosenberger [ctb],
   Haitao Chu [aut] (<https://orcid.org/0000-0003-0932-598X>)
 Repository: CRAN
-Date/Publication: 2020-10-31 07:30:05 UTC
+Date/Publication: 2021-03-15 13:10:02 UTC

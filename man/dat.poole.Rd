@@ -20,4 +20,4 @@ This meta-analysis serves as an example of meta-analysis with binary outcomes.
 \source{
 Poole P, Chong J, Cates CJ (2015). "Mucolytic agents versus placebo for chronic bronchitis or chronic obstructive pulmonary disease." \emph{Cochrane Database of Systematic Reviews}, \bold{7}, Art.{\sspace}No.: CD001287. <\doi{10.1002/14651858.CD001287.pub5}>
 }
-\keyword{datasets}
+\keyword{dataset}

@@ -18,4 +18,4 @@ This meta-analysis serves as an example to illustrate function usage in the pack
 \source{
 Liu CJ, Latham NK (2009). "Progressive resistance strength training for improving physical function in older adults." \emph{Cochrane Database of Systematic Reviews}, \bold{3}. Art.{\sspace}No.: CD002759. <\doi{10.1002/14651858.CD002759.pub2}>
 }
-\keyword{datasets}
+\keyword{dataset}

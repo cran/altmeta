@@ -21,4 +21,4 @@ Fibrinogen Studies Collaboration (2004). "Collaborative meta-analysis of prospec
 
 Fibrinogen Studies Collaboration (2005). "Plasma fibrinogen level and the risk of major cardiovascular diseases and nonvascular mortality: an individual participant meta-analysis." \emph{JAMA}, \bold{294}(14), 1799--1809. <\doi{10.1001/jama.294.14.1799}>
 }
-\keyword{datasets}
+\keyword{dataset}

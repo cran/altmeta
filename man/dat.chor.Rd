@@ -18,4 +18,4 @@ This dataset serves as an example of meta-analysis of proportions.
 \source{
 Woodd SL, Montoya A, Barreix M, Pi L, Calvert C, Rehman AM, Chou D, Campbell OMR (2019). "Incidence of maternal peripartum infection: a systematic review and meta-analysis." \emph{PLOS Medicine}, \bold{16}(12), e1002984. <\doi{10.1371/journal.pmed.1002984}>
 }
-\keyword{datasets}
+\keyword{dataset}

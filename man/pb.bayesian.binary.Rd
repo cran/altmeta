@@ -85,7 +85,7 @@ pb.bayesian.binary(n00, n01, n10, n11, p01 = NULL, p11 = NULL, data,
 The Bayesian models are specified in Shi et al.\sspace(2020). The vague prior N(0, \eqn{10^4}) is used for the regression intercept and slope, and the uniform prior U(0, \code{upp.het}) and half-normal prior HN(\code{phi}) are used for standard deviation parameters. The half-normal priors may be preferred in meta-analyses with rare events or small sample sizes.
 }
 \value{
-This function returns a list containing estimates of regression slopes and their credible intervals with the specified significance level (\code{sig.level}) as well as MCMC posterior samples (if \code{coda} = \code{TRUE}). Each element name in this list is related to a certain publication bias method (e.g., \code{est.bay} and \code{ci.bay} represent the slope estimate and its credible interval based on the proposed Bayesian method). In addition, traceplots for the regression slope are drawn if \code{traceplot} = \code{TRUE}. 
+This function returns a list containing estimates of regression slopes and their credible intervals with the specified significance level (\code{sig.level}) as well as MCMC posterior samples (if \code{coda} = \code{TRUE}). Each element name in this list is related to a certain publication bias method (e.g., \code{est.bay} and \code{ci.bay} represent the slope estimate and its credible interval based on the proposed Bayesian method). In addition, trace plots for the regression slope are drawn if \code{traceplot} = \code{TRUE}. 
 }
 \references{
 Egger M, Davey Smith G, Schneider M, Minder C (1997). "Bias in meta-analysis detected by a simple, graphical test." \emph{BMJ}, \bold{315}(7109), 629--634. <\doi{10.1136/bmj.315.7109.629}>

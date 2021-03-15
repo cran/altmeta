@@ -76,9 +76,9 @@ Reitsma JB, Glas AS, Rutjes AWS, Scholten RJPM, Bossuyt PM, Zwinderman AH (2005)
 
 Zhang H, Lu N, Feng C, Thurston SW, Xia Y, Zhu L, Tu XM (2011). "On fitting generalized linear mixed-effects models for binary responses using different statistical packages." \emph{Statistics in Medicine}, \bold{30}(20), 2562--2572. <\doi{10.1002/sim.4265}>
 }
-%%\author{
-%%  ~~who you are~~
-%%}
+\author{
+Lifeng Lin, Kristine J.{\sspace}Rosenberger
+}
 \note{
 The original articles by Reitsma et al.\sspace(2005) and Chu and Cole (2006) used SAS to implement (generalized) linear mixed models (specifically, \code{PROC MIXED} and \code{PROC NLMIXED}); this function imports \code{\link[metafor]{rma.mv}} from the package \pkg{metafor} and \code{\link[lme4]{glmer}} from the package \pkg{lme4} for implementing these models. The estimation approaches adopted in SAS and the R packages \pkg{metafor} and \pkg{lme4} may differ, which may impact the results. See, for example, Zhang et al.\sspace(2011).
 }
