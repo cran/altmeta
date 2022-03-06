@@ -8,7 +8,7 @@ Bayesian Random-Effects Multivariate Meta-Analysis
 Performs a Bayesian random-effects model for multivariate meta-analysis when the within-study correlations are known.
 }
 \usage{
-mvma.bayesian(ys, covs, n.adapt = 1000, n.chains = 3,
+mvma.bayesian(ys, covs, data, n.adapt = 1000, n.chains = 3,
               n.burnin = 10000, n.iter = 10000, n.thin = 1,
               data.name = NULL, traceplot = FALSE, coda = FALSE)
 }
@@ -19,6 +19,9 @@ mvma.bayesian(ys, covs, n.adapt = 1000, n.chains = 3,
 }
   \item{covs}{
   a numeric list with length n. Each element is the p x p within-study covariance matrix. \code{NA} is allowed for missing endpoints in the covariance matrix.
+}
+  \item{data}{
+  an optional data frame containing the multivariate meta-analysis dataset. If \code{data} is specified, the previous arguments, \code{ys} and \code{covs}, should be specified as their corresponding column names in \code{data}.
 }
   \item{n.adapt}{
   the number of iterations for adaptation in the Markov chain Monte Carlo (MCMC) algorithm. The default is 1,000. This argument and the following \code{n.chains}, \code{n.burnin}, \code{n.iter}, and \code{n.thin} are passed to the functions in the package \pkg{rjags}.
@@ -82,7 +85,7 @@ If a warning "adaptation incomplete" appears, users may increase \code{n.adapt}.
 data("dat.fib")
 set.seed(12345)
 ## increase n.burnin and n.iter for better convergence of MCMC
-out <- mvma.bayesian(ys = dat.fib$y, covs = dat.fib$S,
+out <- mvma.bayesian(ys = y, covs = S, data = dat.fib,
   n.adapt = 1000, n.chains = 3, n.burnin = 100, n.iter = 100,
   n.thin = 1, data.name = "Fibrinogen")
 out

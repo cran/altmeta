@@ -8,7 +8,7 @@ Meta-Analysis Heterogeneity Measures
 Calculates various between-study heterogeneity measures in meta-analysis, including the conventional measures (e.g., \eqn{I^2}) and the alternative measures (e.g., \eqn{I_r^2}) which are robust to outlying studies; p-values of various tests are also calculated.
 }
 \usage{
-metahet(y, s2, n.resam = 1000)
+metahet(y, s2, data, n.resam = 1000)
 }
 
 \arguments{
@@ -17,6 +17,9 @@ metahet(y, s2, n.resam = 1000)
 }
   \item{s2}{
   a numeric vector specifying the within-study variances.
+}
+  \item{data}{
+  an optional data frame containing the meta-analysis dataset. If \code{data} is specified, the previous arguments, \code{y} and \code{s2}, should be specified as their corresponding column names in \code{data}.
 }
   \item{n.resam}{
   a positive integer specifying the number of resampling iterations for calculating p-values of test statistics and 95\% confidence interval of heterogeneity measures.
@@ -93,16 +96,12 @@ Lin L, Chu H, Hodges JS (2017). "Alternative measures of between-study heterogen
 \examples{
 data("dat.aex")
 set.seed(1234)
-attach(dat.aex)
-metahet(y, s2, 100)
-\donttest{metahet(y, s2, 1000)}
-detach(dat.aex)
+metahet(y, s2, dat.aex, 100)
+\donttest{metahet(y, s2, dat.aex, 1000)}
 
 data("dat.hipfrac")
 set.seed(1234)
-attach(dat.hipfrac)
-metahet(y, s2, 100)
-\donttest{metahet(y, s2, 1000)}
-detach(dat.hipfrac)
+metahet(y, s2, dat.hipfrac, 100)
+\donttest{metahet(y, s2, dat.hipfrac, 1000)}
 }
 \keyword{heterogeneity}

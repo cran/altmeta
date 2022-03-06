@@ -71,7 +71,7 @@ This function produces a list containing the following results: a table of the n
 \references{
 Dias S, Welton NJ, Sutton AJ, Caldwell DM, Lu G, Ades AE (2013). "Evidence synthesis for decision making 4: inconsistency in networks of evidence based on randomized controlled trials." \emph{Medical Decision Making}, \bold{33}(5), 641--656. <\doi{10.1177/0272989X12455847}>
 
-Lin L (2020). "Evidence inconsistency degrees of freedom in Bayesian network meta-analysis." \emph{Journal of Biopharmaceutical Statistics}, in press. <\doi{10.1080/10543406.2020.1852247}>
+Lin L (2021). "Evidence inconsistency degrees of freedom in Bayesian network meta-analysis." \emph{Journal of Biopharmaceutical Statistics}, \bold{31}(3), 317--330. <\doi{10.1080/10543406.2020.1852247}>
 
 Lu G, Ades AE (2006). "Assessing evidence inconsistency in mixed treatment comparisons." \emph{Journal of the American Statistical Association}, \bold{101}(474), 447--459. <\doi{10.1198/016214505000001302}>
 
@@ -102,4 +102,3 @@ out
 }
 }
 \keyword{multivariate meta-analysis}
-

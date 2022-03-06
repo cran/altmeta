@@ -8,7 +8,7 @@ Multivariate Meta-Analysis
 Performs a multivariate meta-analysis when the within-study correlations are known.
 }
 \usage{
-mvma(ys, covs, method = "reml", tol = 1e-10)
+mvma(ys, covs, data, method = "reml", tol = 1e-10)
 }
 
 \arguments{
@@ -17,6 +17,9 @@ mvma(ys, covs, method = "reml", tol = 1e-10)
 }
   \item{covs}{
   a numeric list with length n. Each element is the p x p within-study covariance matrix. \code{NA} is allowed for missing endpoints in the covariance matrix.
+}
+  \item{data}{
+  an optional data frame containing the multivariate meta-analysis dataset. If \code{data} is specified, the previous arguments, \code{ys} and \code{covs}, should be specified as their corresponding column names in \code{data}.
 }
   \item{method}{
   a character string specifying the method for estimating the overall effect sizes. It should be \code{"fe"} (fixed-effects model), \code{"ml"} (random-effects model using the maximum likelihood method), or \code{"reml"} (random-effects model using the restricted maximum likelihood method, the default).
@@ -47,7 +50,9 @@ Jackson D, Riley R, White IR (2011). "Multivariate meta-analysis: potential and 
 }
 \examples{
 data("dat.fib")
-mvma(ys = dat.fib$y, covs = dat.fib$S, method = "fe")
-\donttest{mvma(ys = dat.fib$y, covs = dat.fib$S, method = "reml")}
+mvma(ys = y, covs = S, data = dat.fib, method = "fe")
+\donttest{
+mvma(ys = y, covs = S, data = dat.fib, method = "reml")
+}
 }
 \keyword{multivariate meta-analysis}

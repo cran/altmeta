@@ -2,12 +2,12 @@ S3method(plot, meta.dt)
 S3method(plot, metaoutliers)
 S3method(print, meta.dt)
 
-export(maprop.glmm, maprop.twostep, meta.biv, meta.dt, metahet, metaoutliers, metapb, mvma, mvma.bayesian, mvma.hybrid, mvma.hybrid.bayesian, nma.icdf, pb.bayesian.binary, pb.hybrid.binary, pb.hybrid.generic, ssfunnel)
+export(maprop.glmm, maprop.twostep, meta.biv, meta.dt, metahet, metaoutliers, metapb, mvma, mvma.bayesian, mvma.hybrid, mvma.hybrid.bayesian, nma.icdf, nma.predrank, pb.bayesian.binary, pb.hybrid.binary, pb.hybrid.generic, ssfunnel)
 
 import("graphics", "rjags", "stats")
 
 importFrom("coda", "gelman.diag")
-importFrom("grDevices", "png", "dev.off")
+importFrom("grDevices", "adjustcolor", "dev.off", "png")
 importFrom("lme4", "glmer")
 importFrom("Matrix", "rankMatrix")
 importFrom("metafor", "rma", "rma.mv")

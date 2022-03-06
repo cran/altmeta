@@ -8,7 +8,7 @@ Outlier Detection in Meta-Analysis
 Calculates the standardized residual for each study in meta-analysis using the methods desribed in Chapter 12 in Hedges and Olkin (1985) and Viechtbauer and Cheung (2010). A study is considered as an outlier if its standardized residual is greater than 3 in absolute magnitude.
 }
 \usage{
-metaoutliers(y, s2, model)
+metaoutliers(y, s2, data, model)
 }
 
 \arguments{
@@ -17,6 +17,9 @@ metaoutliers(y, s2, model)
 }
   \item{s2}{
   a numeric vector specifying the within-study variances.
+}
+  \item{data}{
+  an optional data frame containing the meta-analysis dataset. If \code{data} is specified, the previous arguments, \code{y} and \code{s2}, should be specified as their corresponding column names in \code{data}.
 }
   \item{model}{
   a character string specified as either \code{"FE"} or \code{"RE"}. If \code{model} = \code{"FE"}, this function uses the outlier detection procedure for the fixed-effect meta-analysis desribed in Chapter 12 in Hedges and Olkin (1985); If \code{model} = \code{"RE"}, the procedure for the random-effects meta-analysis desribed in Viechtbauer and Cheung (2010) is used. See Details for the two approaches. If the argument \code{model} is not specified, this function sets \code{model} = \code{"FE"} if \eqn{I_r^2 < 30\%} and sets \code{model} = \code{"RE"} if \eqn{I_r^2 \geq 30\%}.
@@ -40,14 +43,10 @@ Viechtbauer W, Cheung MWL (2010). "Outlier and influence diagnostics for meta-an
 
 \examples{
 data("dat.aex")
-attach(dat.aex)
-metaoutliers(y, s2, model = "FE")
-metaoutliers(y, s2, model = "RE")
-detach(dat.aex)
+metaoutliers(y, s2, dat.aex, model = "FE")
+metaoutliers(y, s2, dat.aex, model = "RE")
 
 data("dat.hipfrac")
-attach(dat.hipfrac)
-metaoutliers(y, s2)
-detach(dat.hipfrac)
+metaoutliers(y, s2, dat.hipfrac)
 }
 \keyword{heterogeneity}

@@ -14,8 +14,11 @@ pb.trimfill <- function (x, side, estimator = "L0", maxiter = 100, verbose = FAL
   weights <- x$weights
   ni <- x$ni
   if (is.null(side)) {
-    res <- rma(yi, vi, weights = weights, mods = sqrt(vi), 
-      intercept = TRUE, method = x$method, weighted = x$weighted, ...)
+    args <- list(yi, vi, weights = weights, mods = sqrt(vi), intercept = TRUE, method = x$method, weighted = x$weighted, ...)
+    args <- args[!sapply(args, is.null)]
+    res <- do.call(rma, args)
+#    res <- rma(yi, vi, weights = weights, mods = sqrt(vi), 
+#      intercept = TRUE, method = x$method, weighted = x$weighted, ...)
     if (is.na(res$b[2])) res$b[2] <- 0
     if (res$b[2] < 0) {
       side <- "right"
@@ -47,8 +50,11 @@ pb.trimfill <- function (x, side, estimator = "L0", maxiter = 100, verbose = FAL
     yi.t <- yi[1:(k - k0)]
     vi.t <- vi[1:(k - k0)]
     weights.t <- weights[1:(k - k0)]
-    res <- rma(yi.t, vi.t, weights = weights.t, intercept = TRUE, 
-      method = x$method, weighted = x$weighted, ...)
+    args <- list(yi = yi.t, vi = vi.t, weights = weights.t, intercept = TRUE, method = x$method, weighted = x$weighted, ...)
+    args <- args[!sapply(args, is.null)]
+    res <- do.call(rma, args)
+#    res <- rma(yi.t, vi.t, weights = weights.t, intercept = TRUE, 
+#      method = x$method, weighted = x$weighted, ...)
     b <- c(res$b)
     yi.c <- yi - b
     yi.c.r <- rank(abs(yi.c), ties.method = "first")
@@ -93,9 +99,12 @@ pb.trimfill <- function (x, side, estimator = "L0", maxiter = 100, verbose = FAL
     weights.fill <- c(x$weights.f, weights[(k - k0 + 1):k])
     ni.fill <- c(x$ni.f, ni[(k - k0 + 1):k])
     attr(yi.fill, "measure") <- x$measure
-    res <- rma(yi.fill, vi.fill, weights = weights.fill, 
-      ni = ni.fill, intercept = TRUE, method = x$method, 
-      weighted = x$weighted, ...)
+    args <- list(yi = yi.fill, vi = vi.fill, weights = weights.fill, ni = ni.fill, intercept = TRUE, method = x$method, weighted = x$weighted, ...)
+    args <- args[!sapply(args, is.null)]
+    res <- do.call(rma, args)
+#    res <- rma(yi.fill, vi.fill, weights = weights.fill, 
+#      ni = ni.fill, intercept = TRUE, method = x$method, 
+#      weighted = x$weighted, ...)
     res$fill <- c(rep(FALSE, k), rep(TRUE, k0))
     res$ids <- c(x$ids, (x$k.f + 1):(x$k.f + k0))
     if (x$slab.null) {

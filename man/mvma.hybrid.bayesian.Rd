@@ -8,7 +8,7 @@ Bayesian Hybrid Model for Random-Effects Multivariate Meta-Analysis
 Performs a multivariate meta-analysis using the Bayesian hybrid random-effects model when the within-study correlations are unknown.
 }
 \usage{
-mvma.hybrid.bayesian(ys, vars, n.adapt = 1000, n.chains = 3,
+mvma.hybrid.bayesian(ys, vars, data, n.adapt = 1000, n.chains = 3,
                      n.burnin = 10000, n.iter = 10000, n.thin = 1,
                      data.name = NULL, traceplot = FALSE, coda = FALSE)
 }
@@ -19,6 +19,9 @@ mvma.hybrid.bayesian(ys, vars, n.adapt = 1000, n.chains = 3,
 }
   \item{vars}{
   an n x p numeric matrix containing the observed within-study variances. The n rows represent studies, and the p columns represent the multivariate endpoints. \code{NA} is allowed for missing endpoints.
+}
+  \item{data}{
+  an optional data frame containing the multivariate meta-analysis dataset. If \code{data} is specified, the previous arguments, \code{ys} and \code{vars}, should be specified as their corresponding column names in \code{data}.
 }
   \item{n.adapt}{
   the number of iterations for adaptation in the Markov chain Monte Carlo (MCMC) algorithm. The default is 1,000. This argument and the following \code{n.chains}, \code{n.burnin}, \code{n.iter}, and \code{n.thin} are passed to the functions in the package \pkg{rjags}.

@@ -8,7 +8,7 @@ Hybrid Model for Random-Effects Multivariate Meta-Analysis
 Performs a multivariate meta-analysis using the hybrid random-effects model when the within-study correlations are unknown.
 }
 \usage{
-mvma.hybrid(ys, vars, method = "reml", tol = 1e-10)
+mvma.hybrid(ys, vars, data, method = "reml", tol = 1e-10)
 }
 
 \arguments{
@@ -17,6 +17,9 @@ mvma.hybrid(ys, vars, method = "reml", tol = 1e-10)
 }
   \item{vars}{
   an n x p numeric matrix containing the observed within-study variances. The n rows represent studies, and the p columns represent the multivariate endpoints. \code{NA} is allowed for missing endpoints.
+}
+  \item{data}{
+  an optional data frame containing the multivariate meta-analysis dataset. If \code{data} is specified, the previous arguments, \code{ys} and \code{vars}, should be specified as their corresponding column names in \code{data}.
 }
   \item{method}{
   a character string specifying the method for estimating the overall effect sizes. It should be \code{"ml"} (random-effects model using the maximum likelihood method) or \code{"reml"} (random-effects model using the restricted maximum likelihood method, the default).
