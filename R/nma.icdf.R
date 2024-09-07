@@ -77,14 +77,12 @@ nma.icdf <- function(sid, tid, r, n, data, type = c("la", "fe", "re"),
   }
 
   if(is.element("fe", type)){
-    inits.fe <- list(
-      list(mu = rep(0, n.study),
-        .RNG.name = "base::Wichmann-Hill", .RNG.seed = 1234),
-      list(mu = rep(1, n.study),
-        .RNG.name = "base::Wichmann-Hill", .RNG.seed = 12345),
-      list(mu = rep(-1, n.study),
-        .RNG.name = "base::Wichmann-Hill", .RNG.seed = 123456)
-      )
+    set.seed(seed)
+    inits.fe <- NULL
+    for(i in 1:n.chains){
+      inits.fe[[i]] <- list(mu = rep(rnorm(1), n.study),
+        .RNG.name = "base::Wichmann-Hill", .RNG.seed = sample(123456789, 1))
+    }
     params.fe <- c("lor", "totresdev")
 
     # FE NMA with evidence consistency
@@ -155,15 +153,13 @@ nma.icdf <- function(sid, tid, r, n, data, type = c("la", "fe", "re"),
     }
   }
 
-  if(is.element("fe", type)){
-    inits.re <- list(
-      list(mu = rep(0, n.study), tau = 0.1,
-        .RNG.name = "base::Wichmann-Hill", .RNG.seed = 1234),
-      list(mu = rep(1, n.study), tau = 0.5,
-        .RNG.name = "base::Wichmann-Hill", .RNG.seed = 12345),
-      list(mu = rep(-1, n.study), tau = 0.8,
-        .RNG.name = "base::Wichmann-Hill", .RNG.seed = 123456)
-      )
+  if(is.element("re", type)){
+    set.seed(seed)
+    inits.re <- NULL
+    for(i in 1:n.chains){
+      inits.re[[i]] <- list(mu = rep(rnorm(1), n.study), tau = runif(1, 0, 2),
+            .RNG.name = "base::Wichmann-Hill", .RNG.seed = sample(123456789, 1))
+    }
     params.re <- c("lor", "tau", "totresdev")
 
     # RE NMA with evidence consistency

@@ -1,5 +1,5 @@
-69d09d0b7bf078e546fc2ea823da723d *DESCRIPTION
-7c83aceb48dd759dc66051e3405c0a06 *NAMESPACE
+9ddf6db9f62d33be3793c0527babf400 *DESCRIPTION
+efe54a038db5ca721e55bb73caa6c5a7 *NAMESPACE
 00e7ab7ee18d1e864d928f11f956d93e *R/check.counts.R
 1ac837c803aee294f863e445e69b8858 *R/determine.lambda.R
 4de9252157345752943f8f3c119ffc30 *R/find.counts.R
@@ -9,6 +9,8 @@ a2a2f52ecfc6749a8f08afac428d25c1 *R/maprop.glmm.R
 145ec75e561d719a4cf47d85771ee0f2 *R/meta.biv.R
 7baaaaf54011b99c7d8c14efcb13dd33 *R/meta.dt.R
 09ccfb6916b2c41e76cb0987ff360221 *R/meta.ml.R
+2bc66079664cc841bd6ee646f570fbc0 *R/meta.or.smd.R
+ed17199057ecaeab290159dea689cf11 *R/meta.or.smd.model.R
 e6011762d37c97ff827b448b5418932d *R/meta.pen.R
 edf88ec016604f875cbd357ab0a5322f *R/metahet.R
 3cda4438de737f4a9db0599c2088e435 *R/metahet.base.R
@@ -23,7 +25,7 @@ f6205b6c2d1b99f11a418bd7631d3d2f *R/metaoutliers.R
 d86ac6162ac49bfe93c3d25bb8293041 *R/mvma.re.R
 8a049de6f762a4eef6d688981ce4b001 *R/nma.fe.c.R
 ff09c8d4194d4f7fbe38dadbac402318 *R/nma.fe.ic.R
-07e203ded5cfccca4826f94fd7b8d0a0 *R/nma.icdf.R
+01cf49a3fe5bd654410654bb1bad51c0 *R/nma.icdf.R
 3a3a45d874c7f2cbfffef8c34c31b457 *R/nma.predrank.R
 1cad700b46d5ca89ebdd1b303658ff02 *R/nma.re.c.R
 e049895e60013c13d1d49cbcbef782cd *R/nma.re.ic.R
@@ -60,7 +62,7 @@ cb15191856be9480d546a6855dde3ea9 *R/ssfunnel.rd.R
 6a6519577e2dedbff3b1e13a7d60c31c *R/tau2.m.solver.R
 0fb792323e760ce800b754f82baad0db *R/tau2.r.solver.R
 11d2b498925ec517fc526c87423b2dfb *R/tryCatch.W.E.R
-de57efb3ef873c920b3d9e7b89d91fce *build/partial.rdb
+bc4f5197429b90d1c18a8a8301522b44 *build/partial.rdb
 ffe6a52c13cf4589a68234a4bc854427 *data/dat.adams.rda
 2da3b192e0a5b8a7da0778eda50c9be2 *data/dat.aex.rda
 1c0312fba005ba20009fbadd03f2d780 *data/dat.annane.rda
@@ -73,6 +75,7 @@ b6e3a85eb3f4057d21c736d2390f9a47 *data/dat.bohren.rda
 b3f8598ad27d4feb31ccd26cb22e7b46 *data/dat.butters.rda
 261c8616194d3cbc8ee32ae4aa43d088 *data/dat.carless.rda
 e77269742eaf3e5485c97218f77cecfc *data/dat.chor.rda
+37c93287f992f2bb1f9b105f6e4b2f9a *data/dat.dep.rda
 4c54a8f186b3f51ec0d01dffe5ebd5ec *data/dat.ducharme.rda
 b9f954f2995ad24ad5641d1f6502bdee *data/dat.fib.rda
 3cf6ce7dd7ebb3ca030281de0043e55d *data/dat.ha.rda
@@ -103,6 +106,7 @@ f0da2193b90938f122fc34f5265e54e7 *man/dat.bjelakovic.Rd
 c181698cf97146921618c0616eaf47ea *man/dat.butters.Rd
 81ef7424b9346aca44f5068e6e623050 *man/dat.carless.Rd
 2323ee938a5d554e6f5afbea058dc474 *man/dat.chor.Rd
+5d717c39adb3666c60a8018185ce22d5 *man/dat.dep.Rd
 fe171c536c2ebca7376374c0428301d4 *man/dat.ducharme.Rd
 041e40f2235535a41ada82d8a56c7b69 *man/dat.fib.Rd
 32e9de2c4ad114a852ee15ccb54299a1 *man/dat.ha.Rd
@@ -125,6 +129,7 @@ dd1350bb154a0bafedd7526f0b72070a *man/dat.smith.Rd
 a9afa334ade4b5be732929fdf752850a *man/maprop.twostep.Rd
 d7f8ab943436df8ef16e86e779b25113 *man/meta.biv.Rd
 4f337cc22d6885eb456479251c543486 *man/meta.dt.Rd
+4c810af5a70f9d872024f2b55b8a4ed5 *man/meta.or.smd.Rd
 80103fcd98ca5f9232d3ce501a43ddd6 *man/meta.pen.Rd
 46fbca03caf03f6d76177803d5a30286 *man/metahet.Rd
 9bdd89cdf54b7a3ae6463d34c1af58d1 *man/metaoutliers.Rd
@@ -133,7 +138,7 @@ d7f8ab943436df8ef16e86e779b25113 *man/meta.biv.Rd
 54eaabd8a0d9ce7e53903d6939d74590 *man/mvma.bayesian.Rd
 eac24f3fd5bb01449215c38517aa2754 *man/mvma.hybrid.Rd
 d5c34db61baa48e0253a9975e9b27495 *man/mvma.hybrid.bayesian.Rd
-a1baa27ba946eaaa2c57e15ab8dea51f *man/nma.icdf.Rd
+ab8a700cbb082672813f10b327a70c39 *man/nma.icdf.Rd
 1eaf3ebc0ae5a525edd176f9bd7db8e6 *man/nma.predrank.Rd
 8df419a993eb6ef1b71a23e95dae5d44 *man/pb.bayesian.binary.Rd
 e2c861e0fbad7e0b058a865494ed0f1f *man/pb.hybrid.binary.Rd

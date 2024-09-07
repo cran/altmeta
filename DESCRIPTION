@@ -1,12 +1,13 @@
 Package: altmeta
 Type: Package
 Title: Alternative Meta-Analysis Methods
-Version: 4.1
-Date: 2022-08-27
+Version: 4.2
+Date: 2024-09-07
 Authors@R: 
   c(person(given = "Lifeng", family = "Lin",
     role = c("aut", "cre"), email = "lifenglin@arizona.edu",
     comment = c(ORCID = "0000-0002-3562-9816")),
+    person(given = "Yaqi", family = "Jing", role = c("ctb")),
     person(given = "Kristine J.", family = "Rosenberger", role = c("ctb")),
     person(given = "Linyu", family = "Shi", role = c("ctb")),
     person(given = "Yipeng", family = "Wang", role = c("ctb")),
@@ -30,6 +31,8 @@ Description: Provides alternative statistical methods for meta-analysis, includi
     Lin, 2019 <doi:10.1002/jrsm.1340>;
     Lin, 2020 <doi:10.1177/0962280220910172>;
     Shi et al., 2020 <doi:10.1002/jrsm.1415>);
+ - meta-analysis of combining standardized mean differences and odds ratios
+   (Jing et al., 2023 <doi:10.1080/10543406.2022.2105345>);
  - meta-analysis of diagnostic tests for synthesizing sensitivities, specificities, etc.
    (Reitsma et al., 2005 <doi:10.1016/j.jclinepi.2005.02.022>;
     Chu and Cole, 2006 <doi:10.1016/j.jclinepi.2006.06.011>);
@@ -42,11 +45,12 @@ Description: Provides alternative statistical methods for meta-analysis, includi
     Rosenberger et al., 2021 <doi:10.1186/s12874-021-01397-5>).
 License: GPL (>= 2)
 NeedsCompilation: no
-Packaged: 2022-08-27 23:35:53 UTC; lifen
+Packaged: 2024-09-07 07:03:10 UTC; lifen
 Author: Lifeng Lin [aut, cre] (<https://orcid.org/0000-0002-3562-9816>),
+  Yaqi Jing [ctb],
   Kristine J. Rosenberger [ctb],
   Linyu Shi [ctb],
   Yipeng Wang [ctb],
   Haitao Chu [aut] (<https://orcid.org/0000-0003-0932-598X>)
 Repository: CRAN
-Date/Publication: 2022-08-29 07:30:09 UTC
+Date/Publication: 2024-09-07 09:10:06 UTC

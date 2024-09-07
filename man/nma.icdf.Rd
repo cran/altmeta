@@ -52,7 +52,7 @@ nma.icdf(sid, tid, r, n, data, type = c("la", "fe", "re"),
   a character string for specifying the name of the network meta-analysis, which will be used in the file names of the trace plots. It is only used when \code{traceplot} = \code{TRUE}.
 }
   \item{seed}{
-  an integer for specifying the seed of the random number generation for reproducibility during the Markov chain Monte Carlo (MCMC) algorithm for performing Bayesian network meta-analysis models.
+  an integer for specifying the seed of the random number generation for reproducibility during the MCMC algorithm for performing Bayesian network meta-analysis models.
 }
 }
 \details{
