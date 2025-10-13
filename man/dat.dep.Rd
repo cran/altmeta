@@ -34,4 +34,4 @@ This dataset is from Cipriani et al.\sspace(2016), comparing the efficacy and to
 \source{
 Cipriani A, Zhou X, Del Giovane C, Hetrick SE, Qin B, Whittington C, Coghill D, Zhang Y, Hazell P, Leucht S, Cuijpers P, Pu J, Cohen D, Ravindran AV, Liu Y, Michael KD, Yang L, Liu L, Xie P (2016). "Comparative efficacy and tolerability of antidepressants for major depressive disorder in children and adolescents: a network meta-analysis." \emph{The Lancet}, \bold{388}(10047), 881--890. <\doi{10.1016/S0140-6736(16)30385-3}>
 }
-\keyword{datasets}
+\keyword{dataset}

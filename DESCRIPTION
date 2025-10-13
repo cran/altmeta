@@ -1,8 +1,8 @@
 Package: altmeta
 Type: Package
 Title: Alternative Meta-Analysis Methods
-Version: 4.2
-Date: 2024-09-07
+Version: 4.3
+Date: 2025-10-12
 Authors@R: 
   c(person(given = "Lifeng", family = "Lin",
     role = c("aut", "cre"), email = "lifenglin@arizona.edu",
@@ -11,6 +11,9 @@ Authors@R:
     person(given = "Kristine J.", family = "Rosenberger", role = c("ctb")),
     person(given = "Linyu", family = "Shi", role = c("ctb")),
     person(given = "Yipeng", family = "Wang", role = c("ctb")),
+    person(given = "Xing", family = "Xing", role = c("ctb"),
+    comment = c(ORCID = "0000-0001-9394-8957")),
+    person(given = "Zhiyuan", family = "Yu", role = c("ctb")),
     person(given = "Haitao", family = "Chu",
     role = c("aut"), email = "chux0051@umn.edu",
     comment = c(ORCID = "0000-0003-0932-598X")))
@@ -23,7 +26,7 @@ Description: Provides alternative statistical methods for meta-analysis, includi
  - bivariate generalized linear mixed models for synthesizing odds ratios, relative risks,
    and risk differences
    (Chu et al., 2012 <doi:10.1177/0962280210393712>)
- - heterogeneity tests and measures and penalization methods that are robust to outliers
+ - tests and measures for between-study heterogeneity
    (Lin et al., 2017 <doi:10.1111/biom.12543>;
     Wang et al., 2022 <doi:10.1002/sim.9261>);
  - measures, tests, and visualization tools for publication bias or small-study effects
@@ -45,12 +48,14 @@ Description: Provides alternative statistical methods for meta-analysis, includi
     Rosenberger et al., 2021 <doi:10.1186/s12874-021-01397-5>).
 License: GPL (>= 2)
 NeedsCompilation: no
-Packaged: 2024-09-07 07:03:10 UTC; lifen
-Author: Lifeng Lin [aut, cre] (<https://orcid.org/0000-0002-3562-9816>),
+Packaged: 2025-10-13 05:09:05 UTC; lifen
+Author: Lifeng Lin [aut, cre] (ORCID: <https://orcid.org/0000-0002-3562-9816>),
   Yaqi Jing [ctb],
   Kristine J. Rosenberger [ctb],
   Linyu Shi [ctb],
   Yipeng Wang [ctb],
-  Haitao Chu [aut] (<https://orcid.org/0000-0003-0932-598X>)
+  Xing Xing [ctb] (ORCID: <https://orcid.org/0000-0001-9394-8957>),
+  Zhiyuan Yu [ctb],
+  Haitao Chu [aut] (ORCID: <https://orcid.org/0000-0003-0932-598X>)
 Repository: CRAN
-Date/Publication: 2024-09-07 09:10:06 UTC
+Date/Publication: 2025-10-13 20:00:02 UTC
