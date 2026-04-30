@@ -49,12 +49,17 @@ In addition, a hybrid test is computed by combining the p-values across all gamm
 Pan W, Kim J, Zhang Y, Shen X, Wei P (2014). "A powerful and adaptive association test for rare variants." \emph{Genetics}, \bold{197}(4), 1081--1095. <\doi{10.1534/genetics.114.165035}>
 
 Xu G, Lin L, Wei P, Pan W (2016). "An adaptive two-sample test for high-dimensional means." \emph{Biometrika}, \bold{103}(3), 609--624. <\doi{10.1093/biomet/asw029}>
+
+Yu Z, Xiao M, Xing X, Lin L (2025). "Alternative tests and measures for between-study inconsistency in meta-analysis." \emph{BMC Medical Research Methodology}, \bold{25}, 261. <\doi{10.1186/s12874-025-02719-7}>
 }
 
 \author{
 Zhiyuan Yu, Xing Xing, Lifeng Lin 
 }
 
+\seealso{
+\code{\link{metahet}}
+}
 \examples{
 data("dat.hughes")
 set.seed(123)

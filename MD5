@@ -1,5 +1,5 @@
-065dad5839d4250c5c2ed39c66dc98c3 *DESCRIPTION
-8ab8458fb294bd0914c31343a236b70d *NAMESPACE
+d9e6600b6a537bee796690fb19901bdb *DESCRIPTION
+432215eee6a9f2d7f10dc990a6ba0ee7 *NAMESPACE
 00e7ab7ee18d1e864d928f11f956d93e *R/check.counts.R
 1ac837c803aee294f863e445e69b8858 *R/determine.lambda.R
 4de9252157345752943f8f3c119ffc30 *R/find.counts.R
@@ -63,7 +63,7 @@ cb15191856be9480d546a6855dde3ea9 *R/ssfunnel.rd.R
 6a6519577e2dedbff3b1e13a7d60c31c *R/tau2.m.solver.R
 0fb792323e760ce800b754f82baad0db *R/tau2.r.solver.R
 11d2b498925ec517fc526c87423b2dfb *R/tryCatch.W.E.R
-1dda19015f0aa969acee990c150e3ac9 *build/partial.rdb
+ba582b375e5afde780e991c9b7711c6a *build/partial.rdb
 ffe6a52c13cf4589a68234a4bc854427 *data/dat.adams.rda
 2da3b192e0a5b8a7da0778eda50c9be2 *data/dat.aex.rda
 1c0312fba005ba20009fbadd03f2d780 *data/dat.annane.rda
@@ -134,8 +134,8 @@ d7f8ab943436df8ef16e86e779b25113 *man/meta.biv.Rd
 4f337cc22d6885eb456479251c543486 *man/meta.dt.Rd
 4c810af5a70f9d872024f2b55b8a4ed5 *man/meta.or.smd.Rd
 80103fcd98ca5f9232d3ce501a43ddd6 *man/meta.pen.Rd
-46fbca03caf03f6d76177803d5a30286 *man/metahet.Rd
-6e317826721096894d7098f50f299e41 *man/metahet.hybrid.Rd
+962a8c5ec36616512c423397a817128e *man/metahet.Rd
+68baf9f23e23db4516a221b0374f9e23 *man/metahet.hybrid.Rd
 9bdd89cdf54b7a3ae6463d34c1af58d1 *man/metaoutliers.Rd
 5d423814950f16a51f8b2dcf5e7a5f94 *man/metapb.Rd
 44b5af6d10bd94775b8e3e3bf46db52a *man/mvma.Rd

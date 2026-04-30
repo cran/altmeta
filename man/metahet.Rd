@@ -92,7 +92,9 @@ Higgins JPT, Thompson SG, Deeks JJ, Altman DG (2003). "Measuring inconsistency i
 Lin L, Chu H, Hodges JS (2017). "Alternative measures of between-study heterogeneity in meta-analysis: reducing the impact of outlying studies." \emph{Biometrics}, \bold{73}(1), 156--166. <\doi{10.1111/biom.12543}>
 }
 
-
+\seealso{
+\code{\link{metahet.hybrid}}
+}
 \examples{
 data("dat.aex")
 set.seed(1234)
