@@ -32,14 +32,14 @@ pb.hybrid.generic(y, s2, n, data, methods,
   a positive integer specifying the number of resampling iterations for calculating the p-value of the hybrid test.
 }
   \item{theo.pval}{
-  a logical value indicating whether additionally calculating the p-values of the tests specified in \code{methods} based on the test statistics' theoretical null distributions. Regardless of this argument, the resampling-based p-values are always produced by this function for the tests specified in \code{methods}.
+  a logical value indicating whether to additionally calculate the p-values of the tests specified in \code{methods} based on the test statistics' theoretical null distributions. Regardless of this argument, the resampling-based p-values are always produced by this function for the tests specified in \code{methods}.
 }
 }
 \details{
 The hybrid test statistic is defined as the minimum p-value among the publication bias tests considered in the set specified by the argument \code{methods}. Note that the minimum p-value is no longer a genuine p-value because it cannot control the type I error rate. Its p-value needs to be calculated via the resampling approach. See more details in Lin (2020).
 }
 \value{
-This function returns a list containing p-values of the publication bias tests specified in \code{methods} as well as the hybrid test. Each element's name in this list has the format of \code{pval.x}, where \code{x} stands for the character string corresponding to a certain publication bias test, such as \code{rank}, \code{reg}, \code{skew}, etc. The hybrid test's p-value has the name \code{pval.hybrid}. If \code{theo.pval} = \code{TRUE}, additional elements of p-values of the tests in \code{methods} based on theorectical null distributions are included in the produced list; their names have the format of \code{pval.x.theo}. Another p-value of the hybrid test is also produced based on them; its corresponding element has the name \code{pval.hybrid.theo}.
+This function returns a list containing p-values of the publication bias tests specified in \code{methods} as well as the hybrid test. Each element's name in this list has the format of \code{pval.x}, where \code{x} stands for the character string corresponding to a certain publication bias test, such as \code{rank}, \code{reg}, \code{skew}, etc. The hybrid test's p-value has the name \code{pval.hybrid}. If \code{theo.pval} = \code{TRUE}, additional elements of p-values of the tests in \code{methods} based on theoretical null distributions are included in the produced list; their names have the format of \code{pval.x.theo}. Another p-value of the hybrid test is also produced based on them; its corresponding element has the name \code{pval.hybrid.theo}.
 }
 \references{
 Begg CB, Mazumdar M (1994). "Operating characteristics of a rank correlation test for publication bias." \emph{Biometrics}, \bold{50}(4), 1088--1101. <\doi{10.2307/2533446}>
@@ -66,7 +66,7 @@ Thompson SG, Sharp SJ (1999). "Explaining heterogeneity in meta-analysis: a comp
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-\code{\link{pb.bayesian.binary}}, \code{\link{pb.hybrid.binary}}
+\code{\link{pb.bayesian.binary}}, \code{\link{pb.hybrid.binary}}, \code{\link{pb.timelag}}
 }
 \examples{
 ## meta-analysis of mean differences

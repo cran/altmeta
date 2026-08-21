@@ -104,7 +104,7 @@ The current version does not support other effect measures such as relative risk
 }
 
 \seealso{
-\code{\link{pb.hybrid.binary}}, \code{\link{pb.hybrid.generic}}
+\code{\link{pb.hybrid.binary}}, \code{\link{pb.hybrid.generic}}, \code{\link{pb.timelag}}
 }
 \examples{
 \donttest{

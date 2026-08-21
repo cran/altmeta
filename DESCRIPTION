@@ -1,8 +1,8 @@
 Package: altmeta
 Type: Package
 Title: Alternative Meta-Analysis Methods
-Version: 4.3.1
-Date: 2026-04-29
+Version: 4.4
+Date: 2026-08-21
 Authors@R: 
   c(person(given = "Lifeng", family = "Lin",
     role = c("aut", "cre"), email = "lifenglin@arizona.edu",
@@ -30,7 +30,7 @@ Description: Provides alternative statistical methods for meta-analysis, includi
    (Lin et al., 2017 <doi:10.1111/biom.12543>;
     Wang et al., 2022 <doi:10.1002/sim.9261>;
     Yu et al., 2025 <doi:10.1186/s12874-025-02719-7>);
- - measures, tests, and visualization tools for publication bias or small-study effects
+ - measures, tests, and visualization tools for publication bias, small-study effects, or related bias
    (Lin and Chu, 2018 <doi:10.1111/biom.12817>;
     Lin, 2019 <doi:10.1002/jrsm.1340>;
     Lin, 2020 <doi:10.1177/0962280220910172>;
@@ -49,7 +49,7 @@ Description: Provides alternative statistical methods for meta-analysis, includi
     Rosenberger et al., 2021 <doi:10.1186/s12874-021-01397-5>).
 License: GPL (>= 2)
 NeedsCompilation: no
-Packaged: 2026-04-29 23:49:58 UTC; lifen
+Packaged: 2026-08-21 05:13:43 UTC; lifen
 Author: Lifeng Lin [aut, cre] (ORCID: <https://orcid.org/0000-0002-3562-9816>),
   Yaqi Jing [ctb],
   Kristine J. Rosenberger [ctb],
@@ -59,4 +59,4 @@ Author: Lifeng Lin [aut, cre] (ORCID: <https://orcid.org/0000-0002-3562-9816>),
   Zhiyuan Yu [ctb],
   Haitao Chu [aut] (ORCID: <https://orcid.org/0000-0003-0932-598X>)
 Repository: CRAN
-Date/Publication: 2026-04-30 08:30:36 UTC
+Date/Publication: 2026-08-21 07:20:02 UTC

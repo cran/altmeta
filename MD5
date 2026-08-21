@@ -1,5 +1,5 @@
-d9e6600b6a537bee796690fb19901bdb *DESCRIPTION
-432215eee6a9f2d7f10dc990a6ba0ee7 *NAMESPACE
+0fadf86a75b12071bc4d99193ca35e8f *DESCRIPTION
+7b0b7e6d98e5f3a9bb9d901f72b9613b *NAMESPACE
 00e7ab7ee18d1e864d928f11f956d93e *R/check.counts.R
 1ac837c803aee294f863e445e69b8858 *R/determine.lambda.R
 4de9252157345752943f8f3c119ffc30 *R/find.counts.R
@@ -9,7 +9,7 @@ a2a2f52ecfc6749a8f08afac428d25c1 *R/maprop.glmm.R
 145ec75e561d719a4cf47d85771ee0f2 *R/meta.biv.R
 7baaaaf54011b99c7d8c14efcb13dd33 *R/meta.dt.R
 09ccfb6916b2c41e76cb0987ff360221 *R/meta.ml.R
-2bc66079664cc841bd6ee646f570fbc0 *R/meta.or.smd.R
+d2ad39a01a4cf3d6c20a656c27f627d8 *R/meta.or.smd.R
 ed17199057ecaeab290159dea689cf11 *R/meta.or.smd.model.R
 e6011762d37c97ff827b448b5418932d *R/meta.pen.R
 edf88ec016604f875cbd357ab0a5322f *R/metahet.R
@@ -50,6 +50,7 @@ bcd258d3eec1a4fe7bd71fbcb0afe81b *R/pb.reg.R
 1b7f5467d4512777dc17dce535cb1212 *R/pb.skew.het.R
 b62b6d45327050b6aebe07b46af8a584 *R/pb.smoothed.R
 79cc0483dd012a17c319c2d18cac2c28 *R/pb.smoothed.het.R
+12c62eff747c5d7b74dcd5a7beab5123 *R/pb.timelag.R
 99c1cea7b1dd87d4ee57826b408a5b97 *R/pb.trimfill.R
 f3e4d9d38bc3032144853c82206905a8 *R/plot.meta.dt.R
 7be3567e6737946beb885afb814c4bb7 *R/plot.metaoutliers.R
@@ -91,6 +92,7 @@ c9aa52311ccff09e61676b7da531a848 *data/dat.kaner.rda
 103f9d21d06594ab42d528d55cdbf4ab *data/dat.pte.rda
 bec4e37b8d0d432e90a8f3a77cae72d3 *data/dat.sc.rda
 6b979d8b7029f9ad78669c9df3682033 *data/dat.scheidler.rda
+0ca368ac8c8145fc6cb68a318c90149e *data/dat.sherrington.rda
 5af51ccb820f5c3237904e357063eafb *data/dat.slf.rda
 d9372744d3f7a3bbb334015a6a464297 *data/dat.smith.rda
 b98941abebe1b12ab9c1b4aa770601d5 *data/dat.whiting.rda
@@ -123,6 +125,7 @@ e2e42920c3bff70cb6755c140e4bec0d *man/dat.hughes.Rd
 a5afeb783e62608fae693f7293a81a48 *man/dat.pte.Rd
 239d26cc0744486afb2880c1cb9cc792 *man/dat.sc.Rd
 f39a288de29ed6e54cb51dcb7004ff03 *man/dat.scheidler.Rd
+4d87f178debd5e8472210ee2df715956 *man/dat.sherrington.Rd
 7e8a1840e73d9aa68a00a5b12f7a77d6 *man/dat.slf.Rd
 dd1350bb154a0bafedd7526f0b72070a *man/dat.smith.Rd
 23af9724b7e107c84d5afecea25df131 *man/dat.whiting.Rd
@@ -144,9 +147,10 @@ eac24f3fd5bb01449215c38517aa2754 *man/mvma.hybrid.Rd
 d5c34db61baa48e0253a9975e9b27495 *man/mvma.hybrid.bayesian.Rd
 ab8a700cbb082672813f10b327a70c39 *man/nma.icdf.Rd
 1eaf3ebc0ae5a525edd176f9bd7db8e6 *man/nma.predrank.Rd
-8df419a993eb6ef1b71a23e95dae5d44 *man/pb.bayesian.binary.Rd
-e2c861e0fbad7e0b058a865494ed0f1f *man/pb.hybrid.binary.Rd
-8786f3896861e7c04703f51958fda899 *man/pb.hybrid.generic.Rd
+1a0de81be514f094c1601327c243b236 *man/pb.bayesian.binary.Rd
+21f869c7c6fa44805ab030613762e40e *man/pb.hybrid.binary.Rd
+bf491ccb3732cdcb7170fa695a8de370 *man/pb.hybrid.generic.Rd
+f19b0204e23b13ff83376c035500c797 *man/pb.timelag.Rd
 b90d613a18df856f0d570095462819df *man/plot.meta.dt.Rd
 11061b73ff20c95b0347f9437fe7b882 *man/plot.metaoutliers.Rd
 289b9cbbe93e26447395d49367d88ff2 *man/print.meta.dt.Rd

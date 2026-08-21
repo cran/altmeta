@@ -62,7 +62,7 @@ meta.or.smd <- function(y1, sd1, n1, y0, sd0, n0, r1, m1, r0, m0, id.bin, data,
     list(median = bayes.result$quantiles[,"50%"], 
       lci = bayes.result$quantiles[,"2.5%"],
       uci = bayes.result$quantiles[,"97.5%"]), 
-    .Names = c("median", "lci", "uci"),
+    names = c("median", "lci", "uci"),
     row.names = row.names(bayes.result$quantiles),
     class = "data.frame")
   

@@ -3,7 +3,7 @@ S3method(plot, metaoutliers)
 S3method(print, meta.dt)
 S3method(print, metahet.hybrid)
 
-export(maprop.glmm, maprop.twostep, meta.biv, meta.dt, meta.or.smd, meta.pen, metahet, metahet.hybrid, metaoutliers, metapb, mvma, mvma.bayesian, mvma.hybrid, mvma.hybrid.bayesian, nma.icdf, nma.predrank, pb.bayesian.binary, pb.hybrid.binary, pb.hybrid.generic, ssfunnel)
+export(maprop.glmm, maprop.twostep, meta.biv, meta.dt, meta.or.smd, meta.pen, metahet, metahet.hybrid, metaoutliers, metapb, mvma, mvma.bayesian, mvma.hybrid, mvma.hybrid.bayesian, nma.icdf, nma.predrank, pb.bayesian.binary, pb.hybrid.binary, pb.hybrid.generic, pb.timelag, ssfunnel)
 
 import("graphics", "rjags", "stats")
 
